@@ -18,3 +18,15 @@ Observer.create({
 
 // Preload all images. Once all images are preloaded, remove the 'loading' class from the body.
 preloadImages('.slide__img').then(() => document.body.classList.remove('loading'));
+
+// Aqui tenemos la funcion para que los botones cambien en la sección de skills
+function mostrarContenido(skill) {
+    // Oculta todos los divs
+    document.getElementById("general").classList.add("hidden");
+    document.getElementById("frontend").classList.add("hidden");
+    document.getElementById("backend").classList.add("hidden");
+    document.getElementById("diseno").classList.add("hidden");
+
+    // Muestra el div correspondiente
+    document.getElementById(skill).classList.remove("hidden");
+  }
