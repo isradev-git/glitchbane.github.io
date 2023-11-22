@@ -1,0 +1,108 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --background: #121212;
+  --background-claro:#fff;
+  --principal: #8c52ff;
+  --secundario: #727283ff;
+}
+body {
+  background: url(../img/NetWave-System-Background.png) no-repeat center center
+    fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+header {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  /* grid-template-columns: repeat(8, 1fr); */
+  grid-template-columns: repeat(8, 90px);
+  grid-template-rows: repeat(8, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  align-items: center;
+  justify-items: center;
+}
+header .icono {
+    border-radius: 50%;
+    padding: 5px;
+    background-color: var(--principal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .icono:hover {
+    background-color: var(--secundario);
+}
+header .icono .icon {
+  stroke: #fff;
+  width: 40px;
+  height: 40px;
+}
+header a.icono__home {
+  grid-area: 2 / 1 / 3 / 2;
+}
+header a.icono__me {
+  grid-area: 3 / 1 / 4 / 2;
+}
+header a.icono__exp-skills {
+  grid-area: 4 / 1 / 5 / 2;
+}
+header a.icono__work {
+  grid-area: 5 / 1 / 6 / 2;
+}
+header a.icono__testimonials {
+  grid-area: 6 / 1 / 7 / 2;
+}
+header a.icono__contact {
+  grid-area: 7 / 1 / 8 / 2;
+}
+header a.icono__github {
+    grid-area: 2 / 2 / 3 / 3;
+}
+header a.icono__linkedin {
+    grid-area: 3 / 2 / 4 / 3;
+}
+header a.icono__instagram {
+    grid-area: 4 / 2 / 5 / 3;
+}
+header a.icono__x {
+    grid-area: 5 / 2 / 6 / 3;
+}
+
+/* MAIN */
+main {
+  display: none;
+}
+.winbox {
+  
+}
+.winbox .wb-header {
+  height: 2rem;
+}
+.winbox .wb-header .wb-control .wb-full {
+    display: none;
+}
+.winbox .wb-header, .wb-n, .wb-s, .wb-w, .wb-e, .wb-nw, .wb-ne, .wb-se, .wb-sw {
+    background-color: var(--principal);
+}
+.winbox .wb-sw, .wb-se {
+    height: 5px;
+    width: 5px;
+}
+.winbox .wb-e, .wb-w {
+    width: 5px;
+}
+.winbox .wb-s{
+    height: 5px;
+}
+.winbox .wb-body {
+    background-color: var(--background);
+}
+/* MAIN */
