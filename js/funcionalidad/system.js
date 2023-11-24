@@ -8,10 +8,9 @@ const boton__expskills = _("#boton__exp-skills");
 const boton__work = _("#boton__work");
 const boton__testimonials = _("#boton__testimonials");
 const boton__contact = _("#boton__contact");
-const boton__github = _("#boton__github");
-const boton__linkedin = _("#boton__linkedin");
-const boton__instagram = _("#boton__instagram");
-const boton__x = _("#boton__x");
+const boton__doom = _("#boton__doom");
+// const boton__ = _("#");
+
 
 // Variables del contenido
 const homeContent = _("#contenido__home");
@@ -20,6 +19,7 @@ const expskillsContent = _("#contenido__exp-skills");
 const workContent = _("#contenido__work");
 const testimonialsContent = _("#contenido__testimonials");
 const contactContent = _("#contenido__contact");
+const doomContent = _("#contenido__doom");
 
 //Iconos del sistema
 boton__home.addEventListener("click", () => {
@@ -88,7 +88,7 @@ boton__work.addEventListener("click", () => {
 });
 boton__testimonials.addEventListener("click", () => {
   const iconoContactBox = new WinBox({
-    title: "Trabajos",
+    title: "Testimonios",
     width: "70%",
     height: "70%",
     x: "center",
@@ -104,7 +104,7 @@ boton__testimonials.addEventListener("click", () => {
 });
 boton__contact.addEventListener("click", () => {
   const iconoContactBox = new WinBox({
-    title: "Trabajos",
+    title: "Contacto",
     width: "70%",
     height: "70%",
     x: "center",
@@ -118,43 +118,19 @@ boton__contact.addEventListener("click", () => {
     },
   });
 });
-boton__github.addEventListener("click", () => {
+boton__doom.addEventListener("click", () => {
   const iconoContactBox = new WinBox({
-    title: "Github IsraDev",
+    title: "DOOM",
     width: "70%",
     height: "70%",
     x: "center",
     y: "center",
-    url: "https://github.com/isradev-git",
-  });
-});
-boton__linkedin.addEventListener("click", () => {
-  const iconoContactBox = new WinBox({
-    title: "LinkedIn Israel Zamora",
-    width: "70%",
-    height: "70%",
-    x: "center",
-    y: "center",
-    url: "https://www.linkedin.com/in/israel-zamora/",
-  });
-});
-boton__instagram.addEventListener("click", () => {
-  const iconoContactBox = new WinBox({
-    title: "LinkedIn Israel Zamora",
-    width: "70%",
-    height: "70%",
-    x: "center",
-    y: "center",
-    url: "https://www.instagram.com/netwave.3x/",
-  });
-});
-boton__x.addEventListener("click", () => {
-  const iconoContactBox = new WinBox({
-    title: "LinkedIn Israel Zamora",
-    width: "70%",
-    height: "70%",
-    x: "center",
-    y: "center",
-    url: "https://twitter.com/netwave_3x",
+    mount: doomContent,
+    onfocus: function () {
+      this.setBackground("#121212");
+    },
+    onblur: function () {
+      this.setBackground("#121212");
+    },
   });
 });

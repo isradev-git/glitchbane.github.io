@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 *,
 *::after,
 *::before {
@@ -7,27 +9,80 @@
 }
 :root {
   --background: #121212;
+  --background-transparencia: #1212129c;
+  --background-barra: #1d1d1d;
   --background-claro:#fff;
   --principal: #8c52ff;
   --secundario: #727283ff;
+  --blanco: #ffffff;
+}
+@font-face {
+  font-family: 'Quantum'; /* Asigna un nombre a tu fuente */
+  src: url('../fonts/quantum/Quantum.otf') format('truetype'); /* Ruta relativa a la carpeta fonts y formato de la fuente */
 }
 body {
   background: url(../img/NetWave-System-Background.png) no-repeat center center
     fixed;
   background-size: cover;
   overflow: hidden;
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--blanco);
+  font-size: 16px;
 }
+/* AJUSTES GENERALES */
+h1{
+  font-size: 50px;
+}
+h2{
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+h3{
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+h4{
+  font-size: 24px;
+}
+h5{
+  font-size: 20px;
+}
+h6{
+  font-size: 19px;
+}
+p{
+  line-height: 1.25em;
+}
+/* Estilo de la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 6px; /* Ancho de la barra de desplazamiento vertical */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--background-barra); /* Color del botón de desplazamiento */
+  border-radius: 5px; /* Bordes redondeados del botón de desplazamiento */
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--background); /* Color del fondo de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secundario); /* Cambia el color al pasar el ratón sobre el botón de desplazamiento */
+}
+/* AJUSTES GENERALES */
 header {
   height: 100vh;
   width: 100vw;
   display: grid;
-  /* grid-template-columns: repeat(8, 1fr); */
-  grid-template-columns: repeat(8, 90px);
-  grid-template-rows: repeat(8, 1fr);
+  /* grid-template-columns: repeat(8, 90px); */
+  grid-template-columns: 30% repeat(7, auto) 30%;
+  grid-template-rows: repeat(6, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   align-items: center;
   justify-items: center;
+  margin-bottom: 20px;
 }
 header .icono {
     border-radius: 50%;
@@ -45,43 +100,19 @@ header .icono .icon {
   width: 40px;
   height: 40px;
 }
-header a.icono__home {
-  grid-area: 2 / 1 / 3 / 2;
-}
-header a.icono__me {
-  grid-area: 3 / 1 / 4 / 2;
-}
-header a.icono__exp-skills {
-  grid-area: 4 / 1 / 5 / 2;
-}
-header a.icono__work {
-  grid-area: 5 / 1 / 6 / 2;
-}
-header a.icono__testimonials {
-  grid-area: 6 / 1 / 7 / 2;
-}
-header a.icono__contact {
-  grid-area: 7 / 1 / 8 / 2;
-}
-header a.icono__github {
-    grid-area: 2 / 2 / 3 / 3;
-}
-header a.icono__linkedin {
-    grid-area: 3 / 2 / 4 / 3;
-}
-header a.icono__instagram {
-    grid-area: 4 / 2 / 5 / 3;
-}
-header a.icono__x {
-    grid-area: 5 / 2 / 6 / 3;
-}
+header a.icono__home { grid-area: 6 / 2 / 7 / 3; }
+header a.icono__me { grid-area: 6 / 3 / 7 / 4; }
+header a.icono__exp-skills { grid-area: 6 / 4 / 7 / 5; }
+header a.icono__work { grid-area: 6 / 5 / 7 / 6; }
+header a.icono__testimonials { grid-area: 6 / 6 / 7 / 7; }
+header a.icono__contact { grid-area: 6 / 7 / 7 / 8; }
+header a.icono__doom { grid-area: 6 / 8 / 7 / 9; }
 
 /* MAIN */
 main {
   display: none;
 }
 .winbox {
-  
 }
 .winbox .wb-header {
   height: 2rem;
@@ -89,8 +120,16 @@ main {
 .winbox .wb-header .wb-control .wb-full {
     display: none;
 }
+.winbox .wb-header .wb-drag .wb-title{
+  font-family: 'Quantum', monospace;
+  font-size: 20px;
+  text-transform: uppercase;
+}
 .winbox .wb-header, .wb-n, .wb-s, .wb-w, .wb-e, .wb-nw, .wb-ne, .wb-se, .wb-sw {
     background-color: var(--principal);
+}
+.wb-nw, .wb-ne {
+  border-radius: 15px;
 }
 .winbox .wb-sw, .wb-se {
     height: 5px;
@@ -103,6 +142,24 @@ main {
     height: 5px;
 }
 .winbox .wb-body {
-    background-color: var(--background);
+    background-color: var(--background-transparencia);
 }
+/* PRINCIPIO HOME */
+section {
+  padding: 10px;
+}
+section h2{
+  text-align: center;
+  font-size: 40px;
+}
+.contenido__home .home__titulo__texto {
+  text-align: center;
+  margin-bottom: 20px;
+}
+section p{
+  margin-bottom: 20px;
+}
+/* FINAL HOME */
 /* MAIN */
+.dosbox-container { width: 320px; height: 200px; }
+.dosbox-container > .dosbox-overlay { background: url(https://js-dos.com/cdn/DOOM.png); }
