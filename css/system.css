@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 *,
 *::after,
@@ -11,46 +11,46 @@
   --background: #121212;
   --background-transparencia: #1212129c;
   --background-barra: #1d1d1d;
-  --background-claro:#fff;
+  --background-claro: #fff;
   --principal: #8c52ff;
   --secundario: #727283ff;
   --blanco: #ffffff;
 }
 @font-face {
-  font-family: 'Quantum'; /* Asigna un nombre a tu fuente */
-  src: url('../fonts/quantum/Quantum.otf') format('truetype'); /* Ruta relativa a la carpeta fonts y formato de la fuente */
+  font-family: "Quantum"; /* Asigna un nombre a tu fuente */
+  src: url("../fonts/quantum/Quantum.otf") format("truetype"); /* Ruta relativa a la carpeta fonts y formato de la fuente */
 }
 body {
   background: url(../img/NetWave-System-Background.png) no-repeat center center
     fixed;
   background-size: cover;
   overflow: hidden;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   color: var(--blanco);
   font-size: 16px;
 }
 /* AJUSTES GENERALES */
-h1{
+h1 {
   font-size: 50px;
 }
-h2{
+h2 {
   font-size: 40px;
   margin-bottom: 20px;
 }
-h3{
+h3 {
   font-size: 28px;
   margin-bottom: 10px;
 }
-h4{
+h4 {
   font-size: 24px;
 }
-h5{
+h5 {
   font-size: 20px;
 }
-h6{
+h6 {
   font-size: 19px;
 }
-p{
+p {
   line-height: 1.25em;
 }
 /* Estilo de la barra de desplazamiento */
@@ -59,16 +59,22 @@ p{
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--background-barra); /* Color del botón de desplazamiento */
+  background-color: var(
+    --background-barra
+  ); /* Color del botón de desplazamiento */
   border-radius: 5px; /* Bordes redondeados del botón de desplazamiento */
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--background); /* Color del fondo de la barra de desplazamiento */
+  background-color: var(
+    --background
+  ); /* Color del fondo de la barra de desplazamiento */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--secundario); /* Cambia el color al pasar el ratón sobre el botón de desplazamiento */
+  background-color: var(
+    --secundario
+  ); /* Cambia el color al pasar el ratón sobre el botón de desplazamiento */
 }
 /* AJUSTES GENERALES */
 header {
@@ -80,75 +86,101 @@ header {
   grid-template-rows: repeat(6, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  align-items: center;
+  align-items: start;
   justify-items: center;
-  margin-bottom: 20px;
+  /* margin-bottom: 90px; */
 }
 header .icono {
-    border-radius: 50%;
-    padding: 5px;
-    background-color: var(--principal);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: var(--principal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 header .icono:hover {
-    background-color: var(--secundario);
+  background-color: var(--secundario);
 }
 header .icono .icon {
   stroke: #fff;
   width: 40px;
   height: 40px;
 }
-header a.icono__home { grid-area: 6 / 2 / 7 / 3; }
-header a.icono__me { grid-area: 6 / 3 / 7 / 4; }
-header a.icono__exp-skills { grid-area: 6 / 4 / 7 / 5; }
-header a.icono__work { grid-area: 6 / 5 / 7 / 6; }
-header a.icono__testimonials { grid-area: 6 / 6 / 7 / 7; }
-header a.icono__contact { grid-area: 6 / 7 / 7 / 8; }
-header a.icono__doom { grid-area: 6 / 8 / 7 / 9; }
+header a.icono__home {
+  grid-area: 6 / 2 / 7 / 3;
+}
+header a.icono__me {
+  grid-area: 6 / 3 / 7 / 4;
+}
+header a.icono__exp-skills {
+  grid-area: 6 / 4 / 7 / 5;
+}
+header a.icono__work {
+  grid-area: 6 / 5 / 7 / 6;
+}
+header a.icono__testimonials {
+  grid-area: 6 / 6 / 7 / 7;
+}
+header a.icono__contact {
+  grid-area: 6 / 7 / 7 / 8;
+}
+header a.icono__doom {
+  grid-area: 6 / 8 / 7 / 9;
+}
 
 /* MAIN */
 main {
   display: none;
 }
+section {
+  padding: 10px;
+}
+
 .winbox {
 }
 .winbox .wb-header {
   height: 2rem;
 }
 .winbox .wb-header .wb-control .wb-full {
-    display: none;
+  display: none;
 }
-.winbox .wb-header .wb-drag .wb-title{
-  font-family: 'Quantum', monospace;
+.winbox .wb-header .wb-drag .wb-title {
+  font-family: "Quantum", monospace;
   font-size: 20px;
   text-transform: uppercase;
 }
-.winbox .wb-header, .wb-n, .wb-s, .wb-w, .wb-e, .wb-nw, .wb-ne, .wb-se, .wb-sw {
-    background-color: var(--principal);
+.winbox .wb-header,
+.wb-n,
+.wb-s,
+.wb-w,
+.wb-e,
+.wb-nw,
+.wb-ne,
+.wb-se,
+.wb-sw {
+  background-color: var(--principal);
 }
-.wb-nw, .wb-ne {
+.wb-nw,
+.wb-ne {
   border-radius: 15px;
 }
-.winbox .wb-sw, .wb-se {
-    height: 5px;
-    width: 5px;
+.winbox .wb-sw,
+.wb-se {
+  height: 5px;
+  width: 5px;
 }
-.winbox .wb-e, .wb-w {
-    width: 5px;
+.winbox .wb-e,
+.wb-w {
+  width: 5px;
 }
-.winbox .wb-s{
-    height: 5px;
+.winbox .wb-s {
+  height: 5px;
 }
 .winbox .wb-body {
-    background-color: var(--background-transparencia);
+  background-color: var(--background-transparencia);
 }
 /* PRINCIPIO HOME */
-section {
-  padding: 10px;
-}
-section h2{
+.contenido__home h2 {
   text-align: center;
   font-size: 40px;
 }
@@ -156,10 +188,153 @@ section h2{
   text-align: center;
   margin-bottom: 20px;
 }
-section p{
+section p {
   margin-bottom: 20px;
 }
 /* FINAL HOME */
+
+/* INICIO ABOUT ME */
+.contenido__me {
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.contenido__me .contenido__me-box1 {
+  flex: 1 1 0%;
+  display: flex;
+  padding: 20px;
+  border-radius: 5px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  border: 2px solid var(--background-barra);
+}
+.contenido__me .contenido__me-box1 img {
+  /* mix-blend-mode: multiply; */
+  max-width: 400px;
+  min-width: 200px;
+  max-height: 400px;
+  min-height: 200px;
+}
+.contenido__me .contenido__me-box2 {
+  flex: 1 1 0%;
+  display: flex;
+  padding: 20px;
+  border-radius: 5px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  border: 2px solid var(--background-barra);
+}
+.contenido__me .contenido__me-box2 code {
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: var(--background-barra);
+  white-space: pre-line;
+}
+.contenido__me .contenido__me-box2 code span.code1 {
+  color: blue;
+}
+.contenido__me .contenido__me-box2 code span.code2 {
+  color: red;
+}
+.contenido__me .contenido__me-box2 code span.code3 {
+  color: pink;
+}
+.contenido__me .contenido__me-box2 code span.code4 {
+  color: green;
+}
+.contenido__me .contenido__me-box2 code span.code5 {
+  color: cyan;
+}
+.contenido__me .contenido__me-box2 code span.code6 {
+  color: yellow;
+}
+.contenido__me .contenido__me-box2 code span.code7 {
+  color: orange;
+}
+/* FINAL ABOUT ME */
+
+/* INICIO WORK */
+.work__card {
+  position: relative;
+  margin-top: 50px;
+  width: 500px;
+  height: 300px;
+}
+
+.work__card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+
+.work__card:hover .work__card-overlay {
+  display: block;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.work__card-img {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  left: 0;
+}
+
+.work__card-title {
+  position: absolute;
+  width: 500px;
+  left: 0;
+  top: 120px;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  z-index: 1;
+  transition: top 0.5s ease;
+}
+
+.work__card:hover .work__card-title {
+  top: 90px;
+}
+
+.work__card-button {
+  position: absolute;
+  width: 500px;
+  left: 0;
+  top: 180px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.work__card-button a {
+  width: 200px;
+  padding: 12px 48px;
+  text-align: center;
+  color: white;
+  border: solid 2px white;
+  z-index: 1;
+}
+
+.work__card:hover .work__card-button {
+  opacity: 1;
+}
+
+/* FINAL WORK */
 /* MAIN */
-.dosbox-container { width: 320px; height: 200px; }
-.dosbox-container > .dosbox-overlay { background: url(https://js-dos.com/cdn/DOOM.png); }
+.dosbox-work__card {
+  width: 320px;
+  height: 200px;
+}
+.dosbox-work__card > .dosbox-overlay {
+  background: url(https://js-dos.com/cdn/DOOM.png);
+}
