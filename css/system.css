@@ -53,6 +53,35 @@ h6 {
 p {
   line-height: 1.25em;
 }
+.flex-linea {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1rem;
+}
+.hidden {
+  display: none !important;
+}
+.icon {
+  width: 50px;
+  height: 50px;
+  stroke: var(--blanco);
+}
+/* .icon:hover {
+  width: 52px;
+  height: 52px;
+  stroke: var(--principal);
+} */
 /* Estilo de la barra de desplazamiento */
 ::-webkit-scrollbar {
   width: 6px; /* Ancho de la barra de desplazamiento vertical */
@@ -137,8 +166,7 @@ section {
 }
 
 .winbox {
-  width: 80%;
-  height: 80%;
+  padding: 10px;
 }
 .winbox .wb-header {
   height: 2rem;
@@ -179,6 +207,7 @@ section {
   height: 5px;
 }
 .winbox .wb-body {
+  margin-bottom: 10px;
   background-color: var(--background-transparencia);
 }
 /* PRINCIPIO HOME */
@@ -197,10 +226,11 @@ section p {
 
 /* INICIO ABOUT ME */
 .contenido__me {
-  padding: 40px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+  justify-items: stretch;
+  height: 100vh;
   gap: 2rem;
 }
 .contenido__me .contenido__me-box1 {
@@ -259,6 +289,46 @@ section p {
   color: orange;
 }
 /* FINAL ABOUT ME */
+
+/* INICIO EXP-SKILLS*/
+.contenido__exp-skills .contenido__exp-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.contenido__exp-skills .contenido__exp-container button{
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  color: var(--blanco);
+  background-color: var(--secundario);
+}
+.contenido__exp-skills .contenido__exp-container button:hover{
+  color: var(--secundario);
+  background-color: var(--blanco);
+}
+.contenido__exp-skills .contenido__exp-container div h2{
+  text-align: center;
+}
+.contenido__exp-skills
+  .contenido__exp-container
+  div.contenido__exp-tech
+  div.contenido__exp-tech-types {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contenido__exp-skills .contenido__exp-container .contenido__exp-tech span {
+  text-align: center;
+}
+.contenido__exp-skills .contenido__exp-container .contenido__exp-tech span p{
+  font-weight: 800;
+}
+/* FINAL EXP-SKILLS*/
 
 /* INICIO WORK */
 .work__card {
@@ -333,6 +403,7 @@ section p {
 
 /* FINAL WORK */
 /* MAIN */
+/* ESTO ES CSS DEL DOOM DE FUTURO */
 .dosbox-work__card {
   width: 320px;
   height: 200px;
