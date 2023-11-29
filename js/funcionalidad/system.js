@@ -11,7 +11,6 @@ const boton__contact = _("#boton__contact");
 const boton__doom = _("#boton__doom");
 // const boton__ = _("#");
 
-
 // Variables del contenido
 const homeContent = _("#contenido__home");
 const meContent = _("#contenido__me");
@@ -22,11 +21,35 @@ const contactContent = _("#contenido__contact");
 const doomContent = _("#contenido__doom");
 
 //Iconos del sistema
+// boton__home.addEventListener("click", () => {
+//   const iconoHomeBox = new WinBox({
+//     title: "Home",
+//     width: "70%",
+//     height: "70%",
+//     x: "center",
+//     y: "center",
+//     mount: homeContent,
+//     onfocus: function () {
+//       this.setBackground("#121212");
+//     },
+//     onblur: function () {
+//       this.setBackground("#121212");
+//     },
+//   });
+// });
+// Función para detectar si es un dispositivo móvil
+function isMobile() {
+  return window.innerWidth <= 768; // Puedes ajustar el tamaño según tus necesidades
+}
+
 boton__home.addEventListener("click", () => {
+  const width = isMobile() ? '100%' : '70%';
+  const height = isMobile() ? '100%' : '70%';
+
   const iconoAboutBox = new WinBox({
     title: "Home",
-    width: "70%",
-    height: "70%",
+    width: width,
+    height: height,
     x: "center",
     y: "center",
     mount: homeContent,
@@ -38,8 +61,19 @@ boton__home.addEventListener("click", () => {
     },
   });
 });
+
+// Ajustar el tamaño de la ventana al cambiar el tamaño de la ventana
+window.addEventListener('resize', function() {
+  const iconoAboutBox = WinBox.instances[0]; // Asegúrate de ajustar el índice si tienes más de una instancia
+
+  if (iconoAboutBox) {
+    const width = isMobile() ? '100%' : '70%';
+    const height = isMobile() ? '100%' : '70%';
+    iconoAboutBox.resize({ width: width, height: height });
+  }
+});
 boton__me.addEventListener("click", () => {
-  const iconoTechBox = new WinBox({
+  const iconoMeBox = new WinBox({
     title: "Sobre Mi",
     width: "70%",
     height: "70%",
@@ -55,7 +89,7 @@ boton__me.addEventListener("click", () => {
   });
 });
 boton__expskills.addEventListener("click", () => {
-  const iconoWorkBox = new WinBox({
+  const iconoExpSkillBox = new WinBox({
     title: "Experiencia y Skills",
     width: "70%",
     height: "70%",
@@ -71,7 +105,7 @@ boton__expskills.addEventListener("click", () => {
   });
 });
 boton__work.addEventListener("click", () => {
-  const iconoContactBox = new WinBox({
+  const iconoWorkBox = new WinBox({
     title: "Trabajos",
     width: "70%",
     height: "70%",
@@ -87,7 +121,7 @@ boton__work.addEventListener("click", () => {
   });
 });
 boton__testimonials.addEventListener("click", () => {
-  const iconoContactBox = new WinBox({
+  const iconoTestimonialBox = new WinBox({
     title: "Testimonios",
     width: "70%",
     height: "70%",
@@ -119,7 +153,7 @@ boton__contact.addEventListener("click", () => {
   });
 });
 boton__doom.addEventListener("click", () => {
-  const iconoContactBox = new WinBox({
+  const iconoDoomBox = new WinBox({
     title: "DOOM",
     width: "70%",
     height: "70%",

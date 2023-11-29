@@ -137,6 +137,8 @@ section {
 }
 
 .winbox {
+  width: 80%;
+  height: 80%;
 }
 .winbox .wb-header {
   height: 2rem;
