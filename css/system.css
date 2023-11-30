@@ -13,6 +13,7 @@
   --background-barra: #1d1d1d;
   --background-claro: #fff;
   --principal: #8c52ff;
+  --principal-transparencia: #8c52ff5e;
   --secundario: #727283ff;
   --blanco: #ffffff;
 }
@@ -73,8 +74,8 @@ p {
   display: none !important;
 }
 .icon {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   stroke: var(--blanco);
 }
 /* .icon:hover {
@@ -82,6 +83,12 @@ p {
   height: 52px;
   stroke: var(--principal);
 } */
+.borde {
+  flex: 1 1 0%;
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid var(--background-barra);
+}
 /* Estilo de la barra de desplazamiento */
 ::-webkit-scrollbar {
   width: 6px; /* Ancho de la barra de desplazamiento vertical */
@@ -219,9 +226,6 @@ section {
   text-align: center;
   margin-bottom: 20px;
 }
-section p {
-  margin-bottom: 20px;
-}
 /* FINAL HOME */
 
 /* INICIO ABOUT ME */
@@ -303,27 +307,24 @@ section p {
   padding: 10px;
   border-radius: 5px;
   font-size: 13px;
+  font-weight: 100;
   color: var(--blanco);
-  background-color: var(--secundario);
+  background-color: var(--principal-transparencia);
 }
 .contenido__exp-skills .contenido__exp-container button:hover{
-  color: var(--secundario);
-  background-color: var(--blanco);
+  background-color: var(--background-barra);
 }
 .contenido__exp-skills .contenido__exp-container div h2{
   text-align: center;
 }
-.contenido__exp-skills
-  .contenido__exp-container
-  div.contenido__exp-tech
-  div.contenido__exp-tech-types {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 .contenido__exp-skills .contenido__exp-container .contenido__exp-tech span {
   text-align: center;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: var(--background-barra);
+}
+.contenido__exp-skills .contenido__exp-container .contenido__exp-tech span:hover {
+  background-color: var(--principal-transparencia);
 }
 .contenido__exp-skills .contenido__exp-container .contenido__exp-tech span p{
   font-weight: 800;
