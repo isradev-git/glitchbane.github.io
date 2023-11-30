@@ -50,6 +50,7 @@ h5 {
 }
 h6 {
   font-size: 19px;
+  margin-bottom: 10px;
 }
 p {
   line-height: 1.25em;
@@ -118,7 +119,7 @@ header {
   width: 100vw;
   display: grid;
   /* grid-template-columns: repeat(8, 90px); */
-  grid-template-columns: 30% repeat(7, auto) 30%;
+  grid-template-columns: 30% repeat(8, auto) 30%;
   grid-template-rows: repeat(6, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -159,6 +160,9 @@ header a.icono__testimonials {
 }
 header a.icono__contact {
   grid-area: 6 / 7 / 7 / 8;
+}
+header a.icono__social {
+  grid-area: 6 / 9 / 7 / 10;
 }
 header a.icono__doom {
   grid-area: 6 / 8 / 7 / 9;
@@ -218,14 +222,7 @@ section {
   background-color: var(--background-transparencia);
 }
 /* PRINCIPIO HOME */
-.contenido__home h2 {
-  text-align: center;
-  font-size: 40px;
-}
-.contenido__home .home__titulo__texto {
-  text-align: center;
-  margin-bottom: 20px;
-}
+
 /* FINAL HOME */
 
 /* INICIO ABOUT ME */
@@ -235,7 +232,7 @@ section {
   place-items: center;
   justify-items: stretch;
   height: 100vh;
-  gap: 2rem;
+  gap: 1rem;
 }
 .contenido__me .contenido__me-box1 {
   flex: 1 1 0%;
@@ -302,7 +299,7 @@ section {
   align-items: center;
   gap: 1rem;
 }
-.contenido__exp-skills .contenido__exp-container button{
+.contenido__exp-skills .contenido__exp-container button {
   margin-top: 20px;
   padding: 10px;
   border-radius: 5px;
@@ -311,10 +308,10 @@ section {
   color: var(--blanco);
   background-color: var(--principal-transparencia);
 }
-.contenido__exp-skills .contenido__exp-container button:hover{
+.contenido__exp-skills .contenido__exp-container button:hover {
   background-color: var(--background-barra);
 }
-.contenido__exp-skills .contenido__exp-container div h2{
+.contenido__exp-skills .contenido__exp-container div h2 {
   text-align: center;
 }
 .contenido__exp-skills .contenido__exp-container .contenido__exp-tech span {
@@ -323,10 +320,13 @@ section {
   padding: 20px;
   background-color: var(--background-barra);
 }
-.contenido__exp-skills .contenido__exp-container .contenido__exp-tech span:hover {
+.contenido__exp-skills
+  .contenido__exp-container
+  .contenido__exp-tech
+  span:hover {
   background-color: var(--principal-transparencia);
 }
-.contenido__exp-skills .contenido__exp-container .contenido__exp-tech span p{
+.contenido__exp-skills .contenido__exp-container .contenido__exp-tech span p {
   font-weight: 800;
 }
 /* FINAL EXP-SKILLS*/
@@ -393,6 +393,7 @@ section {
   width: 200px;
   padding: 12px 48px;
   text-align: center;
+  text-decoration: none;
   color: white;
   border: solid 2px white;
   z-index: 1;
@@ -411,4 +412,65 @@ section {
 }
 .dosbox-work__card > .dosbox-overlay {
   background: url(https://js-dos.com/cdn/DOOM.png);
+}
+/* ESTO ES CSS DEL DOOM DE FUTURO */
+
+@media (max-width: 1919px) {
+  /* Estilos para ordenadores con pantalla menor de 1920 x 1080 */
+}
+@media (max-width: 1024px) {
+  /* Estilos para tablets */
+  header {
+    grid-template-columns: 15% repeat(8, auto) 15%;
+  }
+  header a{
+    margin-bottom: 60px;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+  /* Estilos para dispositivos móviles en orientación vertical */
+  header {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  header a.icono__home {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  header a.icono__me {
+    grid-area: 2 / 3 / 3 / 4;
+  }
+  header a.icono__exp-skills {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+  header a.icono__work {
+    grid-area: 3 / 3 / 4 / 4;
+  }
+  header a.icono__testimonials {
+    grid-area: 4 / 2 / 5 / 3;
+  }
+  header a.icono__contact {
+    grid-area: 4 / 3 / 5 / 4;
+  }
+  header a.icono__social {
+    grid-area: 5 / 2 / 6 / 3;
+  }
+  header a.icono__doom {
+    grid-area: 5 / 3 / 6 / 4;
+  }
+  /* INICIO ABOUT ME MOBILE*/
+  .contenido__me {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow-x: hidden;
+  }
+  .contenido__me .contenido__me-box1 img {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  /* Estilos para dispositivos móviles en orientación horizontal */
 }

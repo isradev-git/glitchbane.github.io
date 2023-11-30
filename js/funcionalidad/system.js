@@ -18,6 +18,7 @@ const boton__expskills = _("#boton__exp-skills");
 const boton__work = _("#boton__work");
 const boton__testimonials = _("#boton__testimonials");
 const boton__contact = _("#boton__contact");
+const boton__social = _("#boton__social");
 const boton__doom = _("#boton__doom");
 // const boton__ = _("#");
 
@@ -28,6 +29,7 @@ const expskillsContent = _("#contenido__exp-skills");
 const workContent = _("#contenido__work");
 const testimonialsContent = _("#contenido__testimonials");
 const contactContent = _("#contenido__contact");
+const socialContent = _("#contenido__social");
 const doomContent = _("#contenido__doom");
 
 //Iconos del sistema
@@ -163,7 +165,7 @@ function abrirVentana(title, width, height, x, y, mount) {
 }
 
 function isMobile() {
-  return window.innerWidth <= 768; // Puedes ajustar el tamaño según tus necesidades
+  return window.innerWidth <= 768; // Tamaño definido para la pantalla
 }
 
 boton__home.addEventListener("click", () => {
@@ -171,7 +173,7 @@ boton__home.addEventListener("click", () => {
 });
 
 boton__me.addEventListener("click", () => {
-  abrirVentana("Sobre Mi", "30%", "90%", "6%", "2%", meContent);
+  abrirVentana("Sobre Mi", "40%", "90%", "6%", "2%", meContent);
 });
 
 boton__expskills.addEventListener("click", () => {
@@ -188,6 +190,9 @@ boton__testimonials.addEventListener("click", () => {
 
 boton__contact.addEventListener("click", () => {
   abrirVentana("Contacto", "70%", "80%", "center", "center", contactContent);
+});
+boton__social.addEventListener("click", () => {
+  abrirVentana("Redes Sociales", "70%", "80%", "center", "center", socialContent);
 });
 
 boton__doom.addEventListener("click", () => {
