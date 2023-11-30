@@ -145,11 +145,6 @@ header .icono-mac:hover {
     transform: translateY(-4px);
   }
 }
-/* header .icono .icon {
-  stroke: #fff;
-  width: 40px;
-  height: 40px;
-} */
 header a.icono__home {
   grid-area: 6 / 2 / 7 / 3;
 }
@@ -184,6 +179,7 @@ section {
 }
 
 .winbox {
+  z-index: 99;
   padding: 10px;
 }
 .winbox .wb-header {
