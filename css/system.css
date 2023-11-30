@@ -74,16 +74,15 @@ p {
 .hidden {
   display: none !important;
 }
+.icono-mac {
+  width: 60px;
+  height: 60px;
+}
 .icon {
   width: 30px;
   height: 30px;
-  stroke: var(--blanco);
+  stroke: var(--background-claro);
 }
-/* .icon:hover {
-  width: 52px;
-  height: 52px;
-  stroke: var(--principal);
-} */
 .borde {
   flex: 1 1 0%;
   padding: 20px;
@@ -127,25 +126,30 @@ header {
   justify-items: center;
   /* margin-bottom: 90px; */
 }
-header a {
-  margin-bottom: 130px;
-}
 header .icono {
-  border-radius: 50%;
-  padding: 5px;
-  background-color: var(--principal);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-header .icono:hover {
-  background-color: var(--secundario);
+header .icono-mac:hover {
+  animation: bounce 1s ease;
 }
-header .icono .icon {
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-7px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+}
+/* header .icono .icon {
   stroke: #fff;
   width: 40px;
   height: 40px;
-}
+} */
 header a.icono__home {
   grid-area: 6 / 2 / 7 / 3;
 }
@@ -427,11 +431,18 @@ section {
     grid-template-columns: 15% repeat(8, auto) 15%;
   }
   header a{
-    margin-bottom: 130px;
+    margin-bottom: 170px;
   }
 }
 @media only screen and (max-width: 767px) and (orientation: portrait) {
   /* Estilos para dispositivos móviles en orientación vertical */
+  /* Generales */
+  .icono-mac {
+    width: 80px;
+    height: 80px;
+  }
+  /* Generales */
+
   header {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
