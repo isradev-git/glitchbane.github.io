@@ -605,9 +605,6 @@ display: none;
   header {
     grid-template-columns: 15% repeat(8, auto) 15%;
   }
-  header .contenido__doc-apps {
-    margin-bottom: 150px;
-  }
 }
 @media only screen and (max-width: 767px) and (orientation: portrait) {
   /* Estilos para dispositivos móviles en orientación vertical */
@@ -622,7 +619,6 @@ display: none;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    height: 100vh; /* Ajusta la altura según tus necesidades */
   }
   header .contenido__doc-apps {
     display: flex;
