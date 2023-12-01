@@ -118,7 +118,7 @@ header {
   width: 100vw;
   display: grid;
   /* grid-template-columns: repeat(8, 90px); */
-  grid-template-columns: 30% repeat(8, auto) 30%;
+  grid-template-columns: 25% repeat(8, auto) 25%;
   grid-template-rows: repeat(6, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -135,7 +135,11 @@ header .icono-mac:hover {
   animation: bounce 1s ease;
 }
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
   40% {
@@ -145,7 +149,16 @@ header .icono-mac:hover {
     transform: translateY(-4px);
   }
 }
-header a.icono__home {
+header .contenido__doc-apps {
+  grid-area: 6 / 2 / 7 / 10;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  gap: 2rem;
+}
+/* header a.icono__home {
   grid-area: 6 / 2 / 7 / 3;
 }
 header a.icono__me {
@@ -168,7 +181,7 @@ header a.icono__social {
 }
 header a.icono__doom {
   grid-area: 6 / 8 / 7 / 9;
-}
+} */
 
 /* MAIN */
 main {
@@ -425,9 +438,6 @@ section {
   /* Estilos para tablets */
   header {
     grid-template-columns: 15% repeat(8, auto) 15%;
-  }
-  header a{
-    margin-bottom: 170px;
   }
 }
 @media only screen and (max-width: 767px) and (orientation: portrait) {
