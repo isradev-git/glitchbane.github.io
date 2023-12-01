@@ -592,18 +592,32 @@ display: none;
 }
 /* ESTO ES CSS DEL DOOM DE FUTURO */
 
-@media (max-width: 1919px) {
-  /* Estilos para ordenadores con pantalla menor de 1920 x 1080 */
+/* Escritorio extra grande */
+@media only screen and (min-width: 1200px){
+
 }
-@media (max-width: 1024px) {
-  /* Estilos para tablets */
+/* Escritorio grande */
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+
+}
+
+/* Escritorio pequeño / tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px){
   header {
     grid-template-columns: 15% repeat(8, auto) 15%;
   }
+  header .contenido__doc-apps {
+    margin-bottom: 150px;
+  }
 }
-@media only screen and (max-width: 767px) and (orientation: portrait) {
-  /* Estilos para dispositivos móviles en orientación vertical */
-  /* Generales */
+
+/* Tablets y phablets */
+@media only screen and (min-width: 576px) and (max-width: 767px){
+
+}
+
+/* Teléfonos */
+@media only screen and (max-width: 575px){
   .icono-mac {
     width: 40px;
     height: 40px;
@@ -632,10 +646,6 @@ display: none;
     width: 300px;
   }
 }
-@media only screen and (max-width: 767px) and (orientation: landscape) {
-  /* Estilos para dispositivos móviles en orientación horizontal */
-}
-
 
 
 
