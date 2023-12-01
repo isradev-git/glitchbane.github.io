@@ -452,10 +452,9 @@ section {
 
   header {
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100vh; /* Ajusta la altura según tus necesidades */
   }
   header .contenido__doc-apps {
     display: flex;
