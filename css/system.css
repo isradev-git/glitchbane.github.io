@@ -124,6 +124,7 @@ header {
   grid-row-gap: 0px;
   align-items: start;
   justify-items: center;
+  justify-content: center;
   /* margin-bottom: 90px; */
 }
 header .icono {
