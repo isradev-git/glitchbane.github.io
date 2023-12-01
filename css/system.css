@@ -453,9 +453,10 @@ section {
   header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-rows: 10% repeat(8, auto) 10%;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    align-content: center
   }
   header .contenido__doc-apps {
     grid-area: 2 / 1 / 10 / 2;
