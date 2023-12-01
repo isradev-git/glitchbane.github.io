@@ -126,10 +126,12 @@ header {
   display: grid;
   /* grid-template-columns: repeat(8, 90px); */
   grid-template-columns: 25% repeat(8, auto) 25%;
-  grid-template-rows: repeat(6, 1fr);
+  /* grid-template-rows: repeat(6, 1fr); */
+  grid-template-rows: repeat(7, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  align-items: start;
+  /* align-items: start; */
+  align-items: end;
   justify-items: center;
   justify-content: center;
 }
@@ -157,6 +159,7 @@ header .icono-mac:hover {
   }
 }
 header .contenido__doc-apps {
+  /* grid-area: 6 / 2 / 7 / 10; */
   grid-area: 6 / 2 / 7 / 10;
   display: flex;
   flex-direction: row;
@@ -599,7 +602,6 @@ display: none;
   /* Estilos para tablets */
   header {
     grid-template-columns: 15% repeat(8, auto) 15%;
-    transform: scale(0.9);
   }
 }
 @media only screen and (max-width: 767px) and (orientation: portrait) {
