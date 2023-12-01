@@ -606,7 +606,7 @@ display: none;
     grid-template-columns: 15% repeat(8, auto) 15%;
   }
   header .contenido__doc-apps {
-    margin-bottom: 100px;
+    margin-bottom: 150px;
   }
 }
 @media only screen and (max-width: 767px) and (orientation: portrait) {
