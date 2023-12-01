@@ -132,7 +132,6 @@ header {
   align-items: start;
   justify-items: center;
   justify-content: center;
-  /* margin-bottom: 90px; */
 }
 header .icono {
   display: flex;
@@ -228,7 +227,7 @@ section {
 }
 /* PRINCIPIO TERMINAL */
 /* Terminal */
-textarea {
+/* textarea {
   position: absolute;
   left: -100vw;
   background-color: var(--background);
@@ -239,10 +238,10 @@ textarea {
 b {
   font-weight: bold;
   text-decoration: underline;
-}
+} */
 
 /* Cursor Start */
-.cursor {
+/* .cursor {
   font-size: 0.75rem;
   color: var(--secundaryTextColor);
   background-color: var(--secundaryTextColor);
@@ -287,14 +286,10 @@ b {
   to {
     opacity: 1;
   }
-}
+} */
 /* Cursor End */
 
-
-
-
-
-p {
+/* p {
   display: block;
   line-height: 1.3em;
   margin: 0;
@@ -341,24 +336,24 @@ p {
 .inherit,
 a {
   color: #9C8394;
-}
-a {
+} */
+/* a {
   text-decoration: inherit;
-}
-a:hover {
+} */
+/* a:hover {
   background: var(--secundaryTextColor);
   color:var(--background);
-}
-a:focus {
+} */
+/* a:focus {
   outline: 0;
-}
+} */
 
-#mobileInput {
+/* #mobileInput {
 display: none;
-}
+} */
 
 
-@media (max-width:600px){
+/* @media (max-width:600px){
 
   body {
     padding: 0.5rem 0.8rem;
@@ -404,7 +399,7 @@ display: none;
     font-size: small;
   }
 
-}
+} */
 /* FINAL TERMINAL */
 
 /* INICIO ABOUT ME */
