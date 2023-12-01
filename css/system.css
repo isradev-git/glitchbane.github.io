@@ -445,41 +445,24 @@ section {
   /* Estilos para dispositivos móviles en orientación vertical */
   /* Generales */
   .icono-mac {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
   }
   /* Generales */
 
   header {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(10, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
   }
-  header a.icono__home {
-    grid-area: 2 / 2 / 3 / 3;
-  }
-  header a.icono__me {
-    grid-area: 2 / 3 / 3 / 4;
-  }
-  header a.icono__exp-skills {
-    grid-area: 3 / 2 / 4 / 3;
-  }
-  header a.icono__work {
-    grid-area: 3 / 3 / 4 / 4;
-  }
-  header a.icono__testimonials {
-    grid-area: 4 / 2 / 5 / 3;
-  }
-  header a.icono__contact {
-    grid-area: 4 / 3 / 5 / 4;
-  }
-  header a.icono__social {
-    grid-area: 5 / 2 / 6 / 3;
-  }
-  header a.icono__doom {
-    grid-area: 5 / 3 / 6 / 4;
+  header .contenido__doc-apps {
+    grid-area: 2 / 1 / 10 / 2;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
   }
   /* INICIO ABOUT ME MOBILE*/
   .contenido__me {
