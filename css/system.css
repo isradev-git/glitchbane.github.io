@@ -16,6 +16,13 @@
   --principal-transparencia: #8c52ff5e;
   --secundario: #727283ff;
   --blanco: #ffffff;
+
+  /* terminal */
+    --primaryTextColor: #e5e5e5;
+    --secundaryTextColor: #e5e512;
+    --highlightTextColor: #0fa8cd;
+    --white: #fff;
+    --baseDirectory: "system@isradev.com:~$";
 }
 @font-face {
   font-family: "Quantum"; /* Asigna un nombre a tu fuente */
@@ -158,32 +165,13 @@ header .contenido__doc-apps {
   flex-wrap: nowrap;
   justify-content: space-around;
   gap: 2rem;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
-/* header a.icono__home {
-  grid-area: 6 / 2 / 7 / 3;
-}
-header a.icono__me {
-  grid-area: 6 / 3 / 7 / 4;
-}
-header a.icono__exp-skills {
-  grid-area: 6 / 4 / 7 / 5;
-}
-header a.icono__work {
-  grid-area: 6 / 5 / 7 / 6;
-}
-header a.icono__testimonials {
-  grid-area: 6 / 6 / 7 / 7;
-}
-header a.icono__contact {
-  grid-area: 6 / 7 / 7 / 8;
-}
-header a.icono__social {
-  grid-area: 6 / 9 / 7 / 10;
-}
-header a.icono__doom {
-  grid-area: 6 / 8 / 7 / 9;
-} */
-
 /* MAIN */
 main {
   display: none;
@@ -238,9 +226,186 @@ section {
   margin-bottom: 10px;
   background-color: var(--background-transparencia);
 }
-/* PRINCIPIO HOME */
+/* PRINCIPIO TERMINAL */
+/* Terminal */
+textarea {
+  position: absolute;
+  left: -100vw;
+  background-color: var(--background);
+  border: none;
+  color: white;
+}
 
-/* FINAL HOME */
+b {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Cursor Start */
+.cursor {
+  font-size: 0.75rem;
+  color: var(--secundaryTextColor);
+  background-color: var(--secundaryTextColor);
+  position: relative;
+  opacity: 1;
+  height: 1.5em;
+  width: 10px;
+  max-width: 10px;
+  transform: translateY(4px);
+  overflow: hidden;
+  text-indent: -5px;
+  display: inline-block;
+  text-decoration: blink;
+  animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+#command {
+  cursor: text;
+  height: 50px;
+  color: var(--secundaryTextColor);
+}
+#liner {
+  line-height: 1.3em;
+  margin-top: -2px;
+  animation: show 0.5s ease forwards;
+  animation-delay: 1.2s;
+  opacity: 0;
+}
+#liner::before {
+  color: var(--highlightTextColor);
+  content: var(--baseDirectory);
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Cursor End */
+
+
+
+
+
+p {
+  display: block;
+  line-height: 1.3em;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+  letter-spacing: 0.05em;
+  animation: typing 0.5s steps(30, end);
+  
+}
+.no-animation {
+  animation: none !important;
+}
+.typing-animation {
+  animation: typing 0.5s steps(30, end);
+}
+.margin {
+  margin-left: 20px;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.index {
+  color: #DCDCCC;
+}
+.highlightColor {
+  color: var(--highlightTextColor);
+}
+.command {
+  color: var(--secundaryTextColor);
+  text-shadow: 0 0 5px var(--secundaryTextColor); 
+}
+.error {
+  color: var(--highlightTextColor);
+}
+.white {
+  color:var(--white);
+}
+.inherit,
+a {
+  color: #9C8394;
+}
+a {
+  text-decoration: inherit;
+}
+a:hover {
+  background: var(--secundaryTextColor);
+  color:var(--background);
+}
+a:focus {
+  outline: 0;
+}
+
+#mobileInput {
+display: none;
+}
+
+
+@media (max-width:600px){
+
+  body {
+    padding: 0.5rem 0.8rem;
+    overflow-x: auto;
+  }
+
+  #cursor {
+    display: none;
+  }
+
+  textarea {
+    display: none;
+  }
+
+  .cursor {
+    display: none;
+  }
+
+  #mobileInput {
+    display: block;
+  }
+
+  #mobileInput input {
+    border: none;
+    background-color: var(--background);
+    width: 85%;
+    color: var(--primaryTextColor);
+    font-family: monospace;
+    font-size: 1rem;
+    outline: none;
+    font-weight: 500;
+    vertical-align:middle;
+
+  }
+
+  #mobileInput::before {
+    content: ">";
+    color: var(--primaryTextColor);
+    margin-right: 10px;
+  }
+
+  #terminal {
+    font-size: small;
+  }
+
+}
+/* FINAL TERMINAL */
 
 /* INICIO ABOUT ME */
 .contenido__me {
@@ -452,9 +617,9 @@ section {
 
   header {
     display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  height: 100vh; /* Ajusta la altura según tus necesidades */
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100vh; /* Ajusta la altura según tus necesidades */
   }
   header .contenido__doc-apps {
     display: flex;
@@ -476,3 +641,7 @@ section {
 @media only screen and (max-width: 767px) and (orientation: landscape) {
   /* Estilos para dispositivos móviles en orientación horizontal */
 }
+
+
+
+

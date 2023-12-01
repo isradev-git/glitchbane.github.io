@@ -12,7 +12,7 @@ function mostrarContenido(skill) {
 const _ = (selector) => document.querySelector(selector);
 const $ = (selector) => document.getElementById(selector);
 // Variables de los botones
-const boton__home = _("#boton__home");
+const boton__terminal = _("#boton__terminal");
 const boton__me = _("#boton__me");
 const boton__expskills = _("#boton__exp-skills");
 const boton__work = _("#boton__work");
@@ -23,7 +23,7 @@ const boton__doom = _("#boton__doom");
 // const boton__ = _("#");
 
 // Variables del contenido
-const homeContent = _("#contenido__home");
+const terminalContent = _("#contenido__terminal");
 const meContent = _("#contenido__me");
 const expskillsContent = _("#contenido__exp-skills");
 const workContent = _("#contenido__work");
@@ -33,14 +33,14 @@ const socialContent = _("#contenido__social");
 const doomContent = _("#contenido__doom");
 
 //Iconos del sistema
-// boton__home.addEventListener("click", () => {
-//   const iconoHomeBox = new WinBox({
-//     title: "Home",
+// boton__terminal.addEventListener("click", () => {
+//   const iconoterminalBox = new WinBox({
+//     title: "terminal",
 //     width: "70%",
 //     height: "80%",
 //     x: "center",
 //     y: "center",
-//     mount: homeContent,
+//     mount: terminalContent,
 //     onfocus: function () {
 //       this.setBackground("#121212");
 //     },
@@ -168,8 +168,8 @@ function isMobile() {
   return window.innerWidth <= 768; // Tamaño definido para la pantalla
 }
 
-boton__home.addEventListener("click", () => {
-  abrirVentana("Home", "70%", "80%", "center", "center", homeContent);
+boton__terminal.addEventListener("click", () => {
+  abrirVentana("terminal", "70%", "80%", "center", "center", terminalContent);
 });
 
 boton__me.addEventListener("click", () => {
