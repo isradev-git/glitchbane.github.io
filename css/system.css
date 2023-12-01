@@ -451,12 +451,13 @@ section {
   /* Generales */
 
   header {
-    display: grid;
-    justify-items: start;
-    justify-content: start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
   }
   header .contenido__doc-apps {
-    grid-area: 2 / 1 / 10 / 2;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
