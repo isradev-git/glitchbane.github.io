@@ -126,7 +126,7 @@ header {
   /* grid-template-columns: repeat(8, 90px); */
   grid-template-columns: 25% repeat(8, auto) 25%;
   /* grid-template-rows: repeat(6, 1fr); */
-  grid-template-rows: 10% repeat(6, 1fr) 10%;
+  grid-template-rows: 10% repeat(6, 1fr) 5%;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   /* align-items: start; */
