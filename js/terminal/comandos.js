@@ -9,7 +9,7 @@ const ABOUT = [
   "<br>",
   "¡Hola!👋" ,
   "              ",
-  "Soy Isra, un apasionado desarrollador web frontend",
+  "Soy <span class=\"command\">Isra</span>, un apasionado desarrollador web frontend",
   " con un romance eterno con CSS y JavaScript. 🧑‍💻",
   "                            ",
   "                            ",

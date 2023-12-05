@@ -19,8 +19,8 @@
 
   /* terminal */
   --primaryTextColor: #fff;
-  --secundaryTextColor: #e5e512;
-  --highlightTextColor: #8c52ff;
+  --secundaryTextColor: #eeee09;
+  --highlightTextColor: #c052ff;
   --baseDirectory: "system@isradev.com:~$";
 }
 @font-face {
