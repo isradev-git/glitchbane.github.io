@@ -1,27 +1,25 @@
-
 const mql = window.matchMedia("(max-width: 600px)");
 
 window.onload = init;
 
 
 /**
-Initializes the terminal and sets the initial position of the cursor.
-*/
+ * Inicializa el terminal y establece la posición inicial del cursor.
+ */
 function init() {
   cursor.style.left = "0px";
   renderBanner();
 }
 
-let comandHistory = []; //Array containing the command history.
-let commandIndex = 0  //Index for command history handling.
+let comandHistory = []; // Array que contiene el historial de comandos.
+let commandIndex = 0  // Índice para el manejo del historial de comandos.
 
 
 /**
- * Processes a command entered in the terminal and executes the corresponding action.
+ * Procesa un comando ingresado en el terminal y ejecuta la acción correspondiente.
  *
- * @param {string} command - The command to process.
+ * @param {string} command - El comando a procesar.
  */
-
 function processCommand(command) {
 
   const args = formatCommand(command);
@@ -30,48 +28,48 @@ function processCommand(command) {
 
   switch (args[0]) {
     case "help":
-      commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
+      commandIndex = addCommandToHistory(args, comandHistory, commandIndex);
       renderMultipleLines(COMMAND_LIST, 80);
       break;
     case "about":
-      commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
+      commandIndex = addCommandToHistory(args, comandHistory, commandIndex);
       renderMultipleLines(ABOUT, 80);
       break;
     case "social":
-      commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
+      commandIndex = addCommandToHistory(args, comandHistory, commandIndex);
       renderMultipleLines(SOCIAL, 80);
       break;
     case "projects":
-      commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
+      commandIndex = addCommandToHistory(args, comandHistory, commandIndex);
       renderMultipleLines(PROJECTS, 80);
       break;
     case "email":
-      commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
+      commandIndex = addCommandToHistory(args, comandHistory, commandIndex);
       renderMultipleLines(EMAIL_INFO, 80);
       break;
     case "banner": 
-      commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
+      commandIndex = addCommandToHistory(args, comandHistory, commandIndex);
       renderBanner();
       break;
     case "curriculum":
-      commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
-      newTab("https://ealpizarp.github.io/erick-alpizar-cv/");
+      commandIndex = addCommandToHistory(args, comandHistory, commandIndex);
+      newTab("https://github.com/isradev-git");
       break;
     case "clear":
-      commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
-      setTimeout( () =>
-      contentHook = clearTerminal(terminal, contentHook), 1)
+      commandIndex = addCommandToHistory(args, comandHistory, commandIndex);
+      setTimeout(() =>
+        contentHook = clearTerminal(terminal, contentHook), 1)
       break;
     case "ls":
-      commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
+      commandIndex = addCommandToHistory(args, comandHistory, commandIndex);
       renderMultipleLines(DIRECTORIES, 80);
       break;
     case "sudo":
-      commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
+      commandIndex = addCommandToHistory(args, comandHistory, commandIndex);
       renderMultipleLines(SUDO, 80);
       break;
     case "education":
-      commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
+      commandIndex = addCommandToHistory(args, comandHistory, commandIndex);
       if (mql.matches) {
         renderMultipleLines(MOBILE_EDUCATION_INFO, 80);
       } else {
@@ -79,41 +77,41 @@ function processCommand(command) {
       }
       break;
     case "pwd":
-      commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
-      renderLine("<br>/home/ericalpizar/projects/cliPortafolio<br><br>");
+      commandIndex = addCommandToHistory(args, comandHistory, commandIndex);
+      renderLine("<br>/home/isradev/projectos/IsraDev_System<br><br>");
       break
     case "echo":
-      commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
+      commandIndex = addCommandToHistory(args, comandHistory, commandIndex);
       const printCommands = args.slice(1).join(" ");
       renderLine("<br>" + printCommands + "<br></br>", 80);
       break;
     case "cd":
-      commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
+      commandIndex = addCommandToHistory(args, comandHistory, commandIndex);
       if (args[1] === "music") {
-        renderLine("Opennig music...", 80);
-        newTab("https://open.spotify.com/user/ealpizaro?si=d3239ad0630d4390");
+        renderLine("Abriendo música...", 80);
+        newTab("spotifyURL");
       } else if (args[1] === "photos") {
-        renderLine("Opennig photos...", 80);
-        newTab("https://photos.app.goo.gl/DHzDdzHrc4K46CrCA");
+        renderLine("Abriendo fotos...", 80);
+        newTab("FotosURL");
       } else if (args[1] === "videos") {
-        renderLine("Opennig videos...", 80);
-        newTab("https://www.youtube.com/playlist?list=FLBt0XXUPegLUnars8P-eogQ");
+        renderLine("Abriendo videos...", 80);
+        newTab("VideosURL");
       } else {
-        renderLine("Directory not found: " + args.slice(1).join(" "));
+        renderLine("El directorio no ha sido encontrado en el sistema: " + args.slice(1).join(" "));
       }
       break;
-      case "history":
-        renderLine("<br>");
-        comandHistory.push("<br>");
-        renderMultipleLines(comandHistory, 80);
-        comandHistory.pop()
-        break;
+    case "history":
+      renderLine("<br>");
+      comandHistory.push("<br>");
+      renderMultipleLines(comandHistory, 80);
+      comandHistory.pop()
+      break;
     default:
       if (mql.matches) {
-        renderLine("<br>Command not found");
-        renderLine("type <span class=\"command\">'help'</span> for all commands<br><br>");
+        renderLine("<br>Comando no encontrado");
+        renderLine("Escribe <span class=\"command\">'help'</span> para ver el listado completo de comandos disponibles<br><br>");
       } else {
-        renderLine("Command not found. For a list of commands, type <span class=\"command\">'help'</span>.", "error", 100);
+        renderLine("Comando no encontrado. Para una lista de todos los comandos, escribe <span class=\"command\">'help'</span>.", "error", 100);
       }
       break;
   } 
@@ -132,10 +130,10 @@ mobileInput.addEventListener("keydown", (event) => {
 
 
 /**
- * Adds a new line to the terminal output.
- * @param {string} text - The text to add.
- * @param {string} style - The CSS class to apply to the line.
- * @param {number} time - The delay in milliseconds before adding the line.
+ * Añade una nueva línea a la salida del terminal.
+ * @param {string} text - El texto a añadir.
+ * @param {string} style - La clase CSS a aplicar a la línea.
+ * @param {number} time - El retraso en milisegundos antes de añadir la línea.
  */
 function renderLine(text, style, time, asciiArt=false) {
   let formattedText = text;
@@ -152,9 +150,9 @@ function renderLine(text, style, time, asciiArt=false) {
 }
 
 /**
- * Replaces multiple spaces in a string with double non-breaking spaces.
- * @param {string} text - The text to format.
- * @returns {string} The formatted text.
+ * Reemplaza múltiples espacios en una cadena con dobles espacios no rompibles.
+ * @param {string} text - El texto a formatear.
+ * @returns {string} El texto formateado.
  */
 function formatASCIIArt(text) {
   const space = " ";
@@ -170,10 +168,10 @@ function formatText(text) {
 }
 
 /**
- * Creates a new line element with the given text and style.
- * @param {string} text - The text of the line.
- * @param {string} style - The CSS class to apply to the line.
- * @returns {HTMLElement} The new line element.
+ * Crea un nuevo elemento de línea con el texto y el estilo dados.
+ * @param {string} text - El texto de la línea.
+ * @param {string} style - La clase CSS a aplicar a la línea.
+ * @returns {HTMLElement} El nuevo elemento de línea.
  */
 function createLine(text, style) {
   const line = document.createElement("p");
@@ -183,20 +181,14 @@ function createLine(text, style) {
 }
 
 /**
- * Inserts an element before a reference element.
- * @param {HTMLElement} element - The element to insert.
- * @param {HTMLElement} referenceElement - The element to insert the new element before.
+ * Inserta un elemento antes de un elemento de referencia.
+ * @param {HTMLElement} element - El elemento a insertar.
+ * @param {HTMLElement} referenceElement - El elemento para insertar el nuevo elemento antes.
  */
 function insertLine(element, referenceElement) {
   referenceElement?.parentNode?.insertBefore(element, referenceElement);
 }
 
-// /**
-//  * Scrolls the window to the bottom of the page.
-//  */
-// function scrollToBottom() {
-//   window.scrollTo(0, document.body.offsetHeight);
-// }
 
 function scrollToBottom() {
   window.scrollTo({
@@ -207,7 +199,7 @@ function scrollToBottom() {
 
 
 /**
- * Clears the input of the textarea
+ * Borra la entrada del textarea.
  */
 function clearInput(inputElement) {
   inputElement.value = "";
@@ -215,10 +207,10 @@ function clearInput(inputElement) {
 
 
 /**
- * Renders multiple lines with a delay between each one.
- * @param {Array} lines - Array of strings to render as separate lines.
- * @param {string} style - The CSS class to apply to the lines.
- * @param {number} delay - The delay in milliseconds between rendering each line.
+ * Representa múltiples líneas con un retraso entre cada una.
+ * @param {Array} lines - Array de cadenas para representar como líneas separadas.
+ * @param {string} style - La clase CSS a aplicar a las líneas.
+ * @param {number} delay - El retraso en milisegundos entre representar cada línea.
  */
 function renderMultipleLines(lines, delay=0, style="", asciiArt=false) {
   lines.forEach((line, index) => {
@@ -228,11 +220,9 @@ function renderMultipleLines(lines, delay=0, style="", asciiArt=false) {
 }
 
 /**
-Renders a banner based on the screen width.
-@function
-@returns {void}
-*/
-
+ * Representa un banner basado en el ancho de la pantalla.
+ * @returns {void}
+ */
 function renderBanner() {
     if (mql.matches) {
       renderMultipleLines(MOBILE_BANNER, 80, "", true);
@@ -248,13 +238,11 @@ function renderBanner() {
 }
 
 /**
-Clears the terminal.
-@function
-@param {HTMLElement} root - The root element of the terminal.
-@param {HTMLElement} hook - The hook that contains all the previous content.
-@returns {HTMLElement} A cleared hook.
-*/
-
+ * Borra el terminal.
+ * @param {HTMLElement} root - El elemento raíz del terminal.
+ * @param {HTMLElement} hook - El gancho que contiene todo el contenido anterior.
+ * @returns {HTMLElement} Un gancho limpio.
+ */
 function clearTerminal(root, hook) {
   const id = hook.id
   root.innerHTML = '<a id="' + id + '"></a>';
@@ -263,12 +251,10 @@ function clearTerminal(root, hook) {
 }
 
 /**
-Opens a link in a new tab.
-@function
-@param {string} link - The link to be opened.
-@returns {void}
-*/
-
+ * Abre un enlace en una nueva pestaña.
+ * @param {string} link - El enlace a abrir.
+ * @returns {void}
+ */
 function newTab(link) {
   setTimeout(function() {
     window.open(link, "_blank");
@@ -276,45 +262,34 @@ function newTab(link) {
 }
 
 /**
-
-Adds a command to the command history array.
-@function
-@param {string[]} commands - The commands to be added.
-@param {string[]} historyArray - The array that stores the command history.
-@param {number} currentIndex - The index of the current command in the history.
-@returns {number} The index of the new command in the history.
-*/
-
+ * Agrega un comando al array de historial de comandos.
+ * @param {string[]} commands - Los comandos que se agregarán.
+ * @param {string[]} historyArray - El array que almacena el historial de comandos.
+ * @param {number} currentIndex - El índice del comando actual en el historial.
+ * @returns {number} El índice del nuevo comando en el historial.
+ */
 function addCommandToHistory(commands, historyArray, currentIndex) {
   const commandString = commands.join(" ");
   historyArray.push(commandString);
   return currentIndex + 1;
 }
 
-
 /**
-
-Formats a command by converting it to lower case, trimming it, and splitting it into an array.
-@function
-@param {string} command - The command to be formatted.
-@returns {string[]} The formatted command as an array of strings.
-*/
-
+ * Formatea un comando convirtiéndolo a minúsculas, recortándolo y dividiéndolo en un array.
+ * @param {string} command - El comando a formatear.
+ * @returns {string[]} El comando formateado como un array de cadenas.
+ */
 function formatCommand(command) {
   command = command.toLowerCase();
   command = command.trim();
   return command.split(" ");
 }
 
-
 /**
-
-Handles the "Enter" key press event.
-@function
-@param {KeyboardEvent} event - The event object.
-@returns {void}
-*/
-
+ * Maneja el evento de pulsación de la tecla "Enter".
+ * @param {KeyboardEvent} event - El objeto de evento.
+ * @returns {void}
+ */
 function handleEnterKeyPress(event) {
   if (event.key === "Enter") {
     processCommand(event.target.value);
@@ -323,12 +298,10 @@ function handleEnterKeyPress(event) {
 }
 
 /**
-Handles the "ArrowUp" key press event.
-@function
-@param {KeyboardEvent} event - The event object.
-@returns {void}
-*/
-
+ * Maneja el evento de pulsación de la tecla "ArrowUp".
+ * @param {KeyboardEvent} event - El objeto de evento.
+ * @returns {void}
+ */
 function handleArrowUpKeyPress(event) {
   if (event.key === "ArrowUp") {
     event.preventDefault();
@@ -340,15 +313,11 @@ function handleArrowUpKeyPress(event) {
   }
 }
 
-
 /**
-
-Handles the "ArrowDown" key press event.
-@function
-@param {KeyboardEvent} event - The event object.
-@returns {void}
-*/
-
+ * Maneja el evento de pulsación de la tecla "ArrowDown".
+ * @param {KeyboardEvent} event - El objeto de evento.
+ * @returns {void}
+ */
 function handleArrowDownKeyPress(event) {
   if (event.key === "ArrowDown" && commandIndex < comandHistory.length) {
     commandIndex = commandIndex + 1;

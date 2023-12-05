@@ -18,10 +18,9 @@
   --blanco: #ffffff;
 
   /* terminal */
-    --primaryTextColor: #e5e5e5;
+    --primaryTextColor: #fff;
     --secundaryTextColor: #e5e512;
-    --highlightTextColor: #0fa8cd;
-    --white: #fff;
+    --highlightTextColor: #8c52ff;
     --baseDirectory: "system@isradev.com:~$";
 }
 @font-face {
@@ -127,7 +126,7 @@ header {
   /* grid-template-columns: repeat(8, 90px); */
   grid-template-columns: 25% repeat(8, auto) 25%;
   /* grid-template-rows: repeat(6, 1fr); */
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-rows: 10% repeat(6, 1fr) 10%;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   /* align-items: start; */
@@ -160,7 +159,7 @@ header .icono-mac:hover {
 }
 header .contenido__doc-apps {
   /* grid-area: 6 / 2 / 7 / 10; */
-  grid-area: 6 / 2 / 7 / 10;
+  grid-area: 7 / 2 / 8 / 10;
   display: flex;
   flex-direction: row;
   align-items: baseline;
@@ -230,21 +229,23 @@ section {
 }
 /* PRINCIPIO TERMINAL */
 /* Terminal */
-/* textarea {
+.contenido__terminal textarea.texter {
   position: absolute;
   left: -100vw;
   background-color: var(--background);
   border: none;
   color: white;
+  resize: none;
+  user-select: none;
 }
 
-b {
+.contenido__terminal b {
   font-weight: bold;
   text-decoration: underline;
-} */
+}
 
 /* Cursor Start */
-/* .cursor {
+.cursor {
   font-size: 0.75rem;
   color: var(--secundaryTextColor);
   background-color: var(--secundaryTextColor);
@@ -278,7 +279,7 @@ b {
   opacity: 0;
 }
 #liner::before {
-  color: var(--highlightTextColor);
+  /* color: var(--highlightTextColor); */
   content: var(--baseDirectory);
 }
 
@@ -289,10 +290,10 @@ b {
   to {
     opacity: 1;
   }
-} */
+}
 /* Cursor End */
 
-/* p {
+.contenido__terminal p {
   display: block;
   line-height: 1.3em;
   margin: 0;
@@ -321,7 +322,7 @@ b {
   }
 }
 .index {
-  color: #DCDCCC;
+  color: var(--blanco);
 }
 .highlightColor {
   color: var(--highlightTextColor);
@@ -334,26 +335,26 @@ b {
   color: var(--highlightTextColor);
 }
 .white {
-  color:var(--white);
+  color:var(--blanco);
 }
 .inherit,
-a {
-  color: #9C8394;
-} */
-/* a {
+.contenido__terminal a {
+  color: var(--blanco);
+}
+.contenido__terminal a {
   text-decoration: inherit;
-} */
-/* a:hover {
+}
+.contenido__terminal a:hover {
   background: var(--secundaryTextColor);
   color:var(--background);
-} */
-/* a:focus {
+}
+.contenido__terminal a:focus {
   outline: 0;
-} */
+}
 
-/* #mobileInput {
+.contenido__terminal #mobileInput {
 display: none;
-} */
+}
 
 
 /* @media (max-width:600px){
