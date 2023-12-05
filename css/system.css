@@ -627,6 +627,7 @@ display: none;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: flex-start;
+    justify-content: center;
   }
   /* INICIO ABOUT ME MOBILE*/
   .contenido__me {
