@@ -628,6 +628,10 @@ section {
     flex-direction: column;
     flex-wrap: nowrap;
   }
+  /* Terminal Movil */
+  #terminal {
+    font-size: 10px;
+  }
   /* INICIO ABOUT ME MOBILE*/
   .contenido__me {
     display: flex;
