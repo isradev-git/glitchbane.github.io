@@ -89,13 +89,13 @@ function processCommand(command) {
       commandIndex = addCommandToHistory(args, comandHistory, commandIndex);
       if (args[1] === "music") {
         renderLine("Abriendo música...", 80);
-        newTab("spotifyURL");
+        newTab("https://www.youtube.com/playlist?list=PLJGWUhz2ALJBPnYLJe5h2O62-IB7yX7Bv");
       } else if (args[1] === "photos") {
         renderLine("Abriendo fotos...", 80);
-        newTab("FotosURL");
+        newTab("https://www.pinterest.es/search/pins/?q=perritos&rs=typed");
       } else if (args[1] === "videos") {
         renderLine("Abriendo videos...", 80);
-        newTab("VideosURL");
+        newTab("https://www.youtube.com/playlist?list=PLOnuNNmxji-S9TtsSxkpN_nW8geKuO_De");
       } else {
         renderLine("El directorio no ha sido encontrado en el sistema: " + args.slice(1).join(" "));
       }
