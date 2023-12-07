@@ -511,76 +511,65 @@ section {
 /* FINAL EXP-SKILLS*/
 
 /* INICIO WORK */
-.work__card {
+.contenido__work .card {
+  width: 24rem;
+  height: 36rem;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
   position: relative;
-  margin-top: 50px;
-  width: 500px;
-  height: 300px;
+  color: #fff;
+  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
 }
-
-.work__card-overlay {
+.contenido__work .card img {
   position: absolute;
-  top: 0;
-  left: 0;
+  object-fit: cover;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0);
-  transition: background 0.5s ease;
-}
-
-.work__card:hover .work__card-overlay {
-  display: block;
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.work__card-img {
-  position: absolute;
-  width: 500px;
-  height: 300px;
+  top: 0;
   left: 0;
+  opacity: 0.9;
+  transition: opacity 0.2s ease-out;
 }
-
-.work__card-title {
+.contenido__work .card h2 {
   position: absolute;
-  width: 500px;
-  left: 0;
-  top: 120px;
-  font-weight: 700;
-  font-size: 30px;
-  text-align: center;
+  inset: auto auto 30px 30px;
+  margin: 0;
+  transition: inset 0.3s 0.3s ease-out;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: normal;
   text-transform: uppercase;
-  color: white;
-  z-index: 1;
-  transition: top 0.5s ease;
 }
-
-.work__card:hover .work__card-title {
-  top: 90px;
-}
-
-.work__card-button {
+.contenido__work .card p, .card a {
   position: absolute;
-  width: 500px;
-  left: 0;
-  top: 180px;
-  text-align: center;
   opacity: 0;
-  transition: opacity 0.35s ease;
+  max-width: 80%;
+  transition: opacity 0.3s ease-out;
 }
-
-.work__card-button a {
-  width: 200px;
-  padding: 12px 48px;
-  text-align: center;
+.contenido__work .card p {
+  inset: auto auto 80px 30px;
+}
+.contenido__work .card a {
+  inset: auto auto 40px 30px;
+  color: inherit;
   text-decoration: none;
-  color: white;
-  border: solid 2px white;
-  z-index: 1;
 }
-
-.work__card:hover .work__card-button {
+.contenido__work .card a:hover {
+  color: var(--highlightTextColor);
+}
+.contenido__work .card:hover h2 {
+  inset: auto auto 270px 30px;
+  transition: inset 0.3s ease-out;
+}
+.contenido__work .card:hover p, .card:hover a {
+  opacity: 1;
+  transition: opacity 0.5s 0.1s ease-in;
+}
+.contenido__work .card:hover img {
+  transition: opacity 0.3s ease-in;
   opacity: 1;
 }
+
 
 /* FINAL WORK */
 /* MAIN */
@@ -638,7 +627,7 @@ section {
     flex-direction: column;
     align-items: stretch;
     overflow-x: hidden;
-  }
+  } 
   .contenido__me .contenido__me-box1 img {
     width: 300px;
   }
