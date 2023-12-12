@@ -12,6 +12,7 @@
   <link rel="stylesheet" type="text/css" href="./css/system.css" />
   <script src="./js/winbox.bundle.min.js"></script>
   <script src="./js/system.js" defer></script>
+  <script src="./js/emailjs.js" defer></script>
   <!-- Terminal --> 
   <script defer src="js/terminal/comandos.js"></script>
   <script defer src="js/terminal/renderizado-comandos.js"></script>
@@ -271,7 +272,7 @@
           <div class="card-content">
             <h2>Titulo proyecto</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.</p>
-            <a href="#" class="button">Visita el sitio</a>
+            <a href="#" class="button"><button>Mirar proyecto</button></a>
           </div>
         </div>
         <div class = "card">
@@ -279,7 +280,7 @@
           <div class="card-content">
             <h2>Titulo proyecto</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.</p>
-            <a href="#" class="button">Visita el sitio</a>
+            <a href="#" class="button"><button>Mirar proyecto</button></a>
           </div>
         </div>
         <div class = "card">
@@ -287,7 +288,7 @@
           <div class="card-content">
             <h2>Titulo proyecto</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.</p>
-            <a href="#" class="button">Visita el sitio</a>
+            <a href="#" class="button"><button>Mirar proyecto</button></a>
           </div>
         </div>
         <div class = "card">
@@ -295,13 +296,25 @@
           <div class="card-content">
             <h2>Titulo proyecto</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.</p>
-            <a href="#" class="button">Visita el sitio</a>
+            <a href="#" class="button"><button>Mirar proyecto</button></a>
           </div>
         </div>
       </div>
     </section>
     <section class="contenido__testimonials" id="contenido__testimonials">Testimonials</section>
-    <section class="contenido__contact" id="contenido__contact">Contact form</section>
+    <section class="contenido__contact" id="contenido__contact">
+      <form id="form" class="flex-col contact-form">
+        <h2><span>Contáctame ahora</span><br>
+           y te contestaré en menos de <span>24h</span>.</h2>
+        <input type="text" id="name" name="name" placeholder="Nombre completo" required>
+        <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+        <input type="text" id="subject" name="subject" placeholder="Asunto" required>
+        <textarea id="message" name="message" placeholder="Mensaje" cols="30" rows="10" required></textarea>
+        <input type="submit" class="button submit" id="button" value="Enviar Mensaje">
+     </form>
+     <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    </section>
     <section class="contenido__social" id="contenido__social">Redes sociales</section>
     <section class="contenido__doom" id="contenido__doom">Doom
       <!-- <script type="text/javascript">
