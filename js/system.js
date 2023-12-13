@@ -196,5 +196,5 @@ boton__social.addEventListener("click", () => {
 });
 
 boton__doom.addEventListener("click", () => {
-  abrirVentana("DOOM", "70%", "80%", "center", "center", doomContent);
+  abrirVentana("DOOM", "90%", "90%", "center", "center", doomContent);
 });
