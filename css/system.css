@@ -19,7 +19,7 @@
 
   /* terminal */
   --primaryTextColor: #fff;
-  --secundaryTextColor: #eeee09;
+  --secundaryTextColor: #09c0ee;
   --highlightTextColor: #c052ff;
   --baseDirectory: "system@isradev.com:~$";
 
@@ -606,11 +606,151 @@ section {
 
 /* FINAL WORK */
 
+/* INICIO TESTIMONIALS */
+.contenido__testimonials {
+  height: 100%;
+}
+.contenido__testimonials .slider {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.contenido__testimonials .slider__nav {
+  width: 12px;
+  height: 12px;
+  margin: 2rem 12px;
+  border-radius: 50%;
+  z-index: 10;
+  outline: 6px solid #ccc;
+  outline-offset: -6px;
+  box-shadow: 0 0 0 0 var(--secundario), 0 0 0 0 rgba(51, 51, 51, 0);
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.contenido__testimonials .slider__nav:checked {
+  -webkit-animation: check 0.4s linear forwards;
+  animation: check 0.4s linear forwards;
+}
+.contenido__testimonials .slider__nav:checked:nth-of-type(1) ~ .slider__inner {
+  left: 0%;
+}
+.contenido__testimonials .slider__nav:checked:nth-of-type(2) ~ .slider__inner {
+  left: -100%;
+}
+.contenido__testimonials .slider__nav:checked:nth-of-type(3) ~ .slider__inner {
+  left: -200%;
+}
+.contenido__testimonials .slider__nav:checked:nth-of-type(4) ~ .slider__inner {
+  left: -300%;
+}
+.contenido__testimonials .slider__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  -webkit-transition: left 0.4s;
+  transition: left 0.4s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+}
+.contenido__testimonials .slider__contents {
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.contenido__testimonials .slider__image {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+.contenido__testimonials .slider__caption {
+  font-weight: 500;
+  margin: 2rem 0 1rem;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+}
+.contenido__testimonials .slider__txt {
+  color: var(--secundario);
+  margin-bottom: 3rem;
+  max-width: 300px;
+}
+.contenido__testimonials a{
+  text-decoration: none;
+}
+
+@-webkit-keyframes check {
+  50% {
+    outline-color: var(--secundario);
+    box-shadow: 0 0 0 12px var(--secundario), 0 0 0 36px rgba(51, 51, 51, 0.2);
+  }
+  100% {
+    outline-color: var(--secundario);
+    box-shadow: 0 0 0 0 var(--secundario), 0 0 0 0 rgba(51, 51, 51, 0);
+  }
+}
+
+@keyframes check {
+  50% {
+    outline-color: var(--secundario);
+    box-shadow: 0 0 0 12px var(--secundario), 0 0 0 36px rgba(51, 51, 51, 0.2);
+  }
+  100% {
+    outline-color: var(--secundario);
+    box-shadow: 0 0 0 0 var(--secundario), 0 0 0 0 rgba(51, 51, 51, 0);
+  }
+}
+
+/* FINAL TESTIMONIALS */
+
 /* INICIO CONTACT */
 .contenido__contact h2 {
   font-size: 25px;
 }
-.contenido__contact h2 span{
+.contenido__contact h2 span {
   color: var(--principal);
 }
 .contenido__contact input.button {
