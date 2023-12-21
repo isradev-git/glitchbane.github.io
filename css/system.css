@@ -8,7 +8,7 @@
   padding: 0;
 }
 :root {
-    /* --primary-100:#FF6B6B;
+  /* --primary-100:#FF6B6B;
     --primary-200:#dd4d51;
     --primary-300:#8f001a;
     --accent-100:#00FFFF;
@@ -19,25 +19,25 @@
     --bg-200:#1f1f1f;
     --bg-300:#353535; */
 
-  --background: #0F0F0F;
+  --background: #0f0f0f;
   --background-transparencia: #0f0f0fa1;
   --background-barra: #1f1f1f;
   --background-claro: #fff;
-  --principal: #FF6B6B;
+  --principal: #ff6b6b;
   --principal-transparencia: #dd4d51;
   --secundario: #353535;
   --blanco: #ffffff;
 
   /* terminal */
   --primaryTextColor: #fff;
-  --secundaryTextColor: #00FFFF;
-  --highlightTextColor: #FF6B6B;
+  --secundaryTextColor: #00ffff;
+  --highlightTextColor: #ff6b6b;
   --baseDirectory: "system@isradev.com:~$";
 
   /* Buttons */
   --border: 1px;
   --slant: 0.7em;
-  --color: #FF6B6B;
+  --color: #ff6b6b;
   --clip-path: polygon(
     0 0,
     calc(100% - var(--slant)) 0,
@@ -506,16 +506,16 @@ section {
   white-space: pre-line;
 }
 .contenido__me .contenido__me-box2 code span.code1 {
-  color: #00FFFF;
+  color: #00ffff;
 }
 .contenido__me .contenido__me-box2 code span.code2 {
-  color: #FF6B6B;
+  color: #ff6b6b;
 }
 .contenido__me .contenido__me-box2 code span.code3 {
   color: #00999b;
 }
 .contenido__me .contenido__me-box2 code span.code4 {
-  color: #00FFFF;
+  color: #00ffff;
 }
 .contenido__me .contenido__me-box2 code span.code5 {
   color: orange;
@@ -524,7 +524,7 @@ section {
   color: yellow;
 }
 .contenido__me .contenido__me-box2 code span.code7 {
-  color: #FF6B6B;
+  color: #ff6b6b;
 }
 /* FINAL ABOUT ME */
 
@@ -550,6 +550,7 @@ section {
   .contenido__exp-tech
   span:hover {
   background-color: var(--principal-transparencia);
+  transition: background-color 0.3s ease, stroke 0.3s ease;
 }
 .contenido__exp-skills .contenido__exp-container .contenido__exp-tech span p {
   font-weight: 800;
@@ -729,7 +730,7 @@ section {
   margin-bottom: 3rem;
   max-width: 300px;
 }
-.contenido__testimonials a{
+.contenido__testimonials a {
   text-decoration: none;
 }
 
@@ -799,6 +800,32 @@ section {
   transition: none;
 }
 /* FINAL CONTACT */
+
+/* INICIO SOCIAL */
+.contenido__social .contenido__social-h3,
+.contenido__social-p {
+  color: var(--principal);
+  text-align: center;
+}
+.contenido__social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: var(--clip-path);
+  background-color: var(--background-barra);
+  width: 300px;
+  height: 200px;
+}
+.contenido__social a:hover {
+  background-color: var(--principal);
+  transition: background-color 0.3s ease, stroke 0.3s ease;
+}
+.contenido__social a svg {
+  width: 110px;
+  height: 110px;
+  stroke: var(--blanco);
+}
+/* FINAL SOCIAL */
 
 /* MAIN */
 /* ESTO ES CSS DEL DOOM DE FUTURO */
