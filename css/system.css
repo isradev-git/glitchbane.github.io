@@ -8,25 +8,36 @@
   padding: 0;
 }
 :root {
-  --background: #121212;
-  --background-transparencia: #1212129c;
-  --background-barra: #1d1d1d;
+    /* --primary-100:#FF6B6B;
+    --primary-200:#dd4d51;
+    --primary-300:#8f001a;
+    --accent-100:#00FFFF;
+    --accent-200:#00999b;
+    --text-100:#FFFFFF;
+    --text-200:#e0e0e0;
+    --bg-100:#0F0F0F;
+    --bg-200:#1f1f1f;
+    --bg-300:#353535; */
+
+  --background: #0F0F0F;
+  --background-transparencia: #0f0f0fa1;
+  --background-barra: #1f1f1f;
   --background-claro: #fff;
-  --principal: #8c52ff;
-  --principal-transparencia: #8c52ff5e;
-  --secundario: #727283ff;
+  --principal: #FF6B6B;
+  --principal-transparencia: #dd4d51;
+  --secundario: #353535;
   --blanco: #ffffff;
 
   /* terminal */
   --primaryTextColor: #fff;
-  --secundaryTextColor: #09c0ee;
-  --highlightTextColor: #c052ff;
+  --secundaryTextColor: #00FFFF;
+  --highlightTextColor: #FF6B6B;
   --baseDirectory: "system@isradev.com:~$";
 
   /* Buttons */
   --border: 1px;
   --slant: 0.7em;
-  --color: #8c52ff;
+  --color: #FF6B6B;
   --clip-path: polygon(
     0 0,
     calc(100% - var(--slant)) 0,
@@ -495,25 +506,25 @@ section {
   white-space: pre-line;
 }
 .contenido__me .contenido__me-box2 code span.code1 {
-  color: blue;
+  color: #00FFFF;
 }
 .contenido__me .contenido__me-box2 code span.code2 {
-  color: red;
+  color: #FF6B6B;
 }
 .contenido__me .contenido__me-box2 code span.code3 {
-  color: pink;
+  color: #00999b;
 }
 .contenido__me .contenido__me-box2 code span.code4 {
-  color: green;
+  color: #00FFFF;
 }
 .contenido__me .contenido__me-box2 code span.code5 {
-  color: cyan;
+  color: orange;
 }
 .contenido__me .contenido__me-box2 code span.code6 {
   color: yellow;
 }
 .contenido__me .contenido__me-box2 code span.code7 {
-  color: orange;
+  color: #FF6B6B;
 }
 /* FINAL ABOUT ME */
 
@@ -848,6 +859,10 @@ section {
   .contenido__me .contenido__me-box1 img {
     width: 300px;
   }
+  /* FINAL ABOUT ME MOBILE*/
+
+  /* INICIO EXPERIENCIA */
+  /* FINAL EXPERIENCIA */
 }
 @media only screen and (max-width: 767px) and (orientation: landscape) {
   /* Estilos para dispositivos móviles en orientación horizontal */
