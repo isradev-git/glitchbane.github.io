@@ -802,6 +802,9 @@ section {
 /* FINAL CONTACT */
 
 /* INICIO SOCIAL */
+.contenido__social {
+  align-items: center;
+}
 .contenido__social .contenido__social-h3,
 .contenido__social-p {
   color: var(--principal);
