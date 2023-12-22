@@ -177,7 +177,7 @@ boton__me.addEventListener("click", () => {
 });
 
 boton__expskills.addEventListener("click", () => {
-  abrirVentana("Experiencia y Skills", "30%", "80%", "140", "40", expskillsContent);
+  abrirVentana("Experiencia y Skills", "50%", "80%", "140", "40", expskillsContent);
 });
 
 boton__work.addEventListener("click", () => {
