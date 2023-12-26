@@ -438,10 +438,10 @@
           <span>Contáctame ahora</span><br />
           y te contestaré en menos de <span>24h</span>.
         </h2>
-        <input type="text" id="name" name="name" placeholder="Nombre completo" required />
-        <input type="email" id="email" name="email" placeholder="Correo electrónico" required />
-        <input type="text" id="subject" name="subject" placeholder="Asunto" required />
-        <textarea id="message" name="message" placeholder="Mensaje" cols="30" rows="10" required></textarea>
+        <input type="text" class="name" id="name" name="name" placeholder="Nombre completo" autocomplete="off" required />
+        <input type="email" class="email" id="email" name="email" placeholder="Correo electrónico" autocomplete="off" required />
+        <input type="text" class="subject" id="subject" name="subject" placeholder="Asunto" autocomplete="off" required />
+        <textarea class="message" id="message" name="message" placeholder="Mensaje" cols="30" rows="10" autocomplete="off" required></textarea>
         <input type="submit" class="button submit" id="button" value="Enviar Mensaje" />
       </form>
       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>

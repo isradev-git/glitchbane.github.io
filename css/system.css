@@ -412,54 +412,6 @@ section {
 .contenido__terminal #mobileInput {
   display: none;
 }
-
-/* @media (max-width:600px){
-
-  body {
-    padding: 0.5rem 0.8rem;
-    overflow-x: auto;
-  }
-
-  #cursor {
-    display: none;
-  }
-
-  textarea {
-    display: none;
-  }
-
-  .cursor {
-    display: none;
-  }
-
-  #mobileInput {
-    display: block;
-  }
-
-  #mobileInput input {
-    border: none;
-    background-color: var(--background);
-    width: 85%;
-    color: var(--primaryTextColor);
-    font-family: monospace;
-    font-size: 1rem;
-    outline: none;
-    font-weight: 500;
-    vertical-align:middle;
-
-  }
-
-  #mobileInput::before {
-    content: ">";
-    color: var(--primaryTextColor);
-    margin-right: 10px;
-  }
-
-  #terminal {
-    font-size: small;
-  }
-
-} */
 /* FINAL TERMINAL */
 
 /* INICIO ABOUT ME */
@@ -765,6 +717,18 @@ section {
 .contenido__contact h2 span {
   color: var(--principal);
 }
+.contenido__contact input, textarea{
+  background-color: var(--background-barra);
+  border: none;
+  padding: 15px;
+  color: var(--principal);
+  font-weight: 700;
+  clip-path: var(--clip-path);
+}
+.contenido__contact textarea{
+  resize: none;
+  width: 100% !important;
+}
 .contenido__contact input.button {
   font-size: 16px;
   font-weight: 400;
@@ -878,6 +842,28 @@ section {
   /* Terminal Movil */
   #terminal {
     font-size: 10px;
+  }
+  #mobileInput {
+    display: block;
+  }
+
+  #mobileInput input {
+    border: none;
+    background-color: var(--background);
+    width: 85%;
+    color: var(--primaryTextColor);
+    font-family: monospace;
+    font-size: 1rem;
+    outline: none;
+    font-weight: 500;
+    vertical-align:middle;
+
+  }
+
+  #mobileInput::before {
+    content: ">";
+    color: var(--primaryTextColor);
+    margin-right: 10px;
   }
   /* INICIO ABOUT ME MOBILE*/
   .contenido__me {
