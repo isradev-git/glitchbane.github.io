@@ -53,7 +53,7 @@ function processCommand(command) {
       break;
     case "curriculum":
       commandIndex = addCommandToHistory(args, comandHistory, commandIndex);
-      newTab("https://github.com/isradev-git");
+      newTab("../../cv/CV-Israel-INF.pdf");
       break;
     case "clear":
       commandIndex = addCommandToHistory(args, comandHistory, commandIndex);

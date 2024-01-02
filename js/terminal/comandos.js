@@ -19,9 +19,11 @@ const ABOUT = [
   "¡es una aventura emocionante!",
   "                            ",
   "                            ",
-  "Desde pequeño, me sumergí en el fascinante universo de la tecnología,",
-  "y hoy en día, esa pasión se traduce en mi dedicación al desarrollo web.",
-  "No es solo sobre crear sitios; es sobre dar vida a ideas y convertirlas en experiencias",
+  "Desde pequeño, me sumergí en el fascinante universo",
+  " de la tecnología, y hoy en día, esa pasión se traduce",
+  " en mi dedicación al desarrollo web.",
+  "No es solo sobre crear sitios; es sobre dar vida a ideas",
+  " convertirlas en experiencias",
   "que dejen huella. 🚀",
   "<br>"
 ];

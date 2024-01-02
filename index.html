@@ -292,14 +292,51 @@
           </div>
         </div>
 
-        <div id="Formacion" class="hidden">
+        <div class="contenido__exp-formacion" id="Formacion" class="hidden">
           <h2>FORMACIÓN</h2>
-          <p>Aquí van la formación que tienes en total</p>
+          <div class="borde">
+            <h4>Desarrollo de aplicaciones con tecnologías web</h4>
+            <p>Certificado de profesionalidad</p>
+            <p>AJE Ciudad Real</p>
+          </div>
+          <div class="borde">
+            <h4>Técnico en sistemas microinformaticos y redes</h4>
+            <p>FP grado medio</p>
+            <p>IES Maestre de Calatrava</p>
+          </div>
+          <div class="borde">
+            <h4>E.S.O (PCPI Informático)</h4>
+            <p>Educación Secundaria Obligatoria</p>
+            <p>IES Campo de Calatrava</p>
+          </div>
+          <div class="borde">
+            <h4>Cursos Udemy Desarrollo Web</h4>
+            <p>Udemy Courses</p>
+          </div>
         </div>
 
-        <div id="Experiencia" class="hidden">
-          <h2>EXPERIENCIA</h2>
-          <p>Aquí van tu experiencia DIMAX, ETC</p>
+        <div class="contenido__exp-experiencia" id="Experiencia" class="hidden">
+          <h2>EXPERIENCIA PROFESIONAL</h2>
+          <div class="borde">
+            <h3>Desarrollo Web Frontend</h3>
+            <h5>Dimax Soluciones Integrales | Noviembre 2022 - Noviembre 2023</h5>
+            <ul>
+              <li>Diseño web con reglas UX UI.</li>
+              <li>Desarrollo web en Wordpress, Odoo y Prestashop.</li>
+              <li>Gestión de CRM.</li>
+              <li>Tratamiento de imagenes</li>
+              <li>SEO y Copywriting web.</li>
+            </ul>
+          </div>
+          <div class="borde">
+            <h3>Proyectos personales</h3>
+            <h5>Aplicaciones frontend</h5>
+            <ul>
+              <li>Diseños de web responsive con CSS Vanilla y Tailwind</li>
+              <li>Diferentes funcionalidades con JavaScript</li>
+              <li>Funcionamiento y pruebas con APIs</li>
+            </ul>
+          </div>
         </div>
         <!-- FIN PRUEBAS -->
       </div>
@@ -438,10 +475,14 @@
           <span>Contáctame ahora</span><br />
           y te contestaré en menos de <span>24h</span>.
         </h2>
-        <input type="text" class="name" id="name" name="name" placeholder="Nombre completo" autocomplete="off" required />
-        <input type="email" class="email" id="email" name="email" placeholder="Correo electrónico" autocomplete="off" required />
-        <input type="text" class="subject" id="subject" name="subject" placeholder="Asunto" autocomplete="off" required />
-        <textarea class="message" id="message" name="message" placeholder="Mensaje" cols="30" rows="10" autocomplete="off" required></textarea>
+        <input type="text" class="name" id="name" name="name" placeholder="Nombre completo" autocomplete="off"
+          required />
+        <input type="email" class="email" id="email" name="email" placeholder="Correo electrónico" autocomplete="off"
+          required />
+        <input type="text" class="subject" id="subject" name="subject" placeholder="Asunto" autocomplete="off"
+          required />
+        <textarea class="message" id="message" name="message" placeholder="Mensaje" cols="30" rows="10"
+          autocomplete="off" required></textarea>
         <input type="submit" class="button submit" id="button" value="Enviar Mensaje" />
       </form>
       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -450,14 +491,17 @@
       <h3 class="contenido__social-h3">Te dejo todas mis redes sociales</h3>
       <p class="contenido__social-p">Desde profesionales a personales</p>
       <a class="contenido__social-a" href="https://github.com/isradev-git" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-          <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" viewBox="0 0 24 24"
+          stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
         </svg>
       </a>
       <a class="contenido__social-a" href="https://www.linkedin.com/in/israel-zamora/" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" viewBox="0 0 24 24"
+          stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
           <path d="M8 11l0 5" />
           <path d="M8 8l0 .01" />
@@ -466,16 +510,18 @@
         </svg>
       </a>
       <a class="contenido__social-a" href="https://www.instagram.com/netwave.3x/" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" viewBox="0 0 24 24"
+          stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
           <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
           <path d="M16.5 7.5l0 .01" />
         </svg>
       </a>
       <a class="contenido__social-a" href="https://twitter.com/netwave_3x" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-x" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-x" viewBox="0 0 24 24"
+          stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
           <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
         </svg>

@@ -189,7 +189,7 @@ boton__testimonials.addEventListener("click", () => {
 });
 
 boton__contact.addEventListener("click", () => {
-  abrirVentana("Contacto", "30%", "70%", "center", "center", contactContent);
+  abrirVentana("Contacto", "30%", "80%", "center", "center", contactContent);
 });
 boton__social.addEventListener("click", () => {
   abrirVentana("Redes Sociales", "30%", "80%", "center", "center", socialContent);
