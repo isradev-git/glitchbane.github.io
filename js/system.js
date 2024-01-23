@@ -185,7 +185,7 @@ boton__work.addEventListener("click", () => {
 });
 
 boton__testimonials.addEventListener("click", () => {
-  abrirVentana("Testimonios", "30%", "80%", "center", "center", testimonialsContent);
+  abrirVentana("Testimonios", "40%", "90%", "center", "center", testimonialsContent);
 });
 
 boton__contact.addEventListener("click", () => {
