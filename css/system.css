@@ -524,8 +524,10 @@ color: var(--principal);
 
 /* INICIO WORK */
 .contenido__work .card {
-  width: 24rem;
-  height: 36rem;
+  /* width: 24rem;
+  height: 36rem; */
+  width: 400px;
+  height: 500px;
   clip-path: var(--clip-path);
   overflow: hidden;
   cursor: pointer;
@@ -548,7 +550,6 @@ color: var(--principal);
   inset: auto auto 30px 30px;
   margin: 0;
   transition: inset 0.3s 0.3s ease-out;
-  font-family: "Roboto Condensed", sans-serif;
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -578,7 +579,7 @@ color: var(--principal);
 }
 .contenido__work .card:hover img {
   transition: opacity 0.3s ease-in;
-  opacity: 1;
+  opacity: 0.3;
 }
 
 /* FINAL WORK */
@@ -633,17 +634,18 @@ color: var(--principal);
 .contenido__testimonials .slider__nav:checked:nth-of-type(2) ~ .slider__inner {
   left: -100%;
 }
-.contenido__testimonials .slider__nav:checked:nth-of-type(3) ~ .slider__inner {
+/* .contenido__testimonials .slider__nav:checked:nth-of-type(3) ~ .slider__inner {
   left: -200%;
 }
 .contenido__testimonials .slider__nav:checked:nth-of-type(4) ~ .slider__inner {
   left: -300%;
-}
+} */
 .contenido__testimonials .slider__inner {
   position: absolute;
   top: 0;
   left: 0;
-  width: 400%;
+  /* width: 400%; ORIGINAL CON 4 TESTIMONIOS*/
+  width: 200%;
   height: 100%;
   -webkit-transition: left 0.4s;
   transition: left 0.4s;

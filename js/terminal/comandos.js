@@ -137,6 +137,10 @@ SUDO = [
 ]
 
 EDUCATION_INFO = [
+  "<br><strong>Actividades Administrativas con relación al cliente</strong>",
+  "FP Dual",
+  "Qualif Ciudad Real",
+  "                                                  ",
   "<br><strong>Desarrollo de aplicaciones con tecnologías web</strong>",
   "Certificado de profesionalidad",
   "AJE Ciudad Real",
@@ -155,6 +159,10 @@ EDUCATION_INFO = [
 ]
 
 MOBILE_EDUCATION_INFO = [
+  "<br><strong>Actividades Administrativas con relación al cliente</strong>",
+  "FP Dual",
+  "Qualif Ciudad Real",
+  "                                                  ",
   "<br><strong>Desarrollo de aplicaciones con tecnologías web</strong>",
   "Certificado de profesionalidad",
   "AJE Ciudad Real",
