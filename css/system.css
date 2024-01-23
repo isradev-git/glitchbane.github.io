@@ -22,6 +22,7 @@
   --background: #0f0f0f;
   --background-transparencia: #0f0f0fa1;
   --background-barra: #1f1f1f;
+  --background-text-testimonials: #838383;
   --background-claro: #fff;
   --principal: #ff6b6b;
   --principal-transparencia: #dd4d51;
@@ -694,7 +695,7 @@ color: var(--principal);
   text-transform: uppercase;
 }
 .contenido__testimonials .slider__txt {
-  color: var(--secundario);
+  color: var(--background-text-testimonials);
   margin-bottom: 3rem;
   max-width: 300px;
 }
