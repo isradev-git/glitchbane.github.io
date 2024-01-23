@@ -899,6 +899,12 @@ color: var(--principal);
     gap: 0.7rem;
   }
   /* FINAL EXPERIENCIA */
+
+  /* INICIO WORK */
+  .contenido__work .card p {
+    font-size: 14px;
+  }
+  /* FINAL WORK */
 }
 @media only screen and (max-width: 767px) and (orientation: landscape) {
   /* Estilos para dispositivos móviles en orientación horizontal */
