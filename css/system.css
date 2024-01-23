@@ -688,6 +688,7 @@ color: var(--principal);
 }
 .contenido__testimonials .slider__caption {
   font-weight: 500;
+  font-size: 24px;
   margin: 2rem 0 1rem;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
@@ -905,6 +906,12 @@ color: var(--principal);
     font-size: 14px;
   }
   /* FINAL WORK */
+
+  /* INICIO TESTIMONIALS */
+  .contenido__testimonials .slider__txt {
+    font-size: 14px;
+  }
+  /* FINAL TESTIMONIALS */
 }
 @media only screen and (max-width: 767px) and (orientation: landscape) {
   /* Estilos para dispositivos móviles en orientación horizontal */
