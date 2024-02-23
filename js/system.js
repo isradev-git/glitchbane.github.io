@@ -146,14 +146,13 @@ const doomContent = _("#contenido__doom");
 //   });
 // });
 
-
 function abrirVentana(title, width, height, x, y, mount) {
   return new WinBox({
     title: title,
-    width: isMobile() ? '100%' : width,
-    height: isMobile() ? '100%' : height,
-    x: isMobile() ? '0' : x,
-    y: isMobile() ? '0' : y,
+    width: isMobile() ? "100%" : width,
+    height: isMobile() ? "100%" : height,
+    x: isMobile() ? "0" : x,
+    y: isMobile() ? "0" : y,
     mount: mount,
     onfocus: function () {
       this.setBackground("#121212");
@@ -177,7 +176,14 @@ boton__me.addEventListener("click", () => {
 });
 
 boton__expskills.addEventListener("click", () => {
-  abrirVentana("Experiencia y Skills", "50%", "80%", "140", "40", expskillsContent);
+  abrirVentana(
+    "Experiencia y Skills",
+    "50%",
+    "80%",
+    "140",
+    "40",
+    expskillsContent
+  );
 });
 
 boton__work.addEventListener("click", () => {
@@ -185,16 +191,46 @@ boton__work.addEventListener("click", () => {
 });
 
 boton__testimonials.addEventListener("click", () => {
-  abrirVentana("Testimonios", "40%", "90%", "center", "center", testimonialsContent);
+  abrirVentana(
+    "Testimonios",
+    "40%",
+    "90%",
+    "center",
+    "center",
+    testimonialsContent
+  );
 });
 
 boton__contact.addEventListener("click", () => {
   abrirVentana("Contacto", "30%", "80%", "center", "center", contactContent);
 });
 boton__social.addEventListener("click", () => {
-  abrirVentana("Redes Sociales", "30%", "80%", "center", "center", socialContent);
+  abrirVentana(
+    "Redes Sociales",
+    "30%",
+    "80%",
+    "center",
+    "center",
+    socialContent
+  );
 });
 
+// boton__doom.addEventListener("click", () => {
+//   abrirVentana("DOOM", "90%", "90%", "center", "center", doomContent);
+// });
 boton__doom.addEventListener("click", () => {
-  abrirVentana("DOOM", "90%", "90%", "center", "center", doomContent);
+  const iconoDoomBox = new WinBox({
+    title: "DOOM",
+    url: "https://dos.zone/doom-dec-1993/",
+    width: "90%",
+    height: "90%",
+    x: "center",
+    y: "center",
+    onfocus: function () {
+      this.setBackground("#121212");
+    },
+    onblur: function () {
+      this.setBackground("#121212");
+    },
+  });
 });
