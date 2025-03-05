@@ -8,26 +8,23 @@
   padding: 0;
 }
 :root {
-  /* --primary-100:#FF6B6B;
-    --primary-200:#dd4d51;
-    --primary-300:#8f001a;
-    --accent-100:#00FFFF;
-    --accent-200:#00999b;
-    --text-100:#FFFFFF;
-    --text-200:#e0e0e0;
-    --bg-100:#0F0F0F;
-    --bg-200:#1f1f1f;
-    --bg-300:#353535; */
-
   --background: #0f0f0f;
   --background-transparencia: #0f0f0fa1;
   --background-barra: #1f1f1f;
   --background-text-testimonials: #838383;
   --background-claro: #fff;
-  --principal: #ff6b6b;
-  --principal-transparencia: #dd4d51;
-  --secundario: #353535;
+  --principal: #E54C4Fff;
+  --principal-transparencia: #dd4d52dcff;
+  --secundario: #3C4258ff;
   --blanco: #ffffff;
+
+
+  /* --imperial-red: #E54C4Fff;
+  --bittersweet-shimmer: #CB4D53ff;
+  --cordovan: #954C57ff;
+  --charcoal: #394056ff;
+  --english-violet: #494556ff;
+  --charcoal-2: #3C4258ff; */
 
   /* terminal */
   --primaryTextColor: #fff;
@@ -53,7 +50,7 @@
   src: url("../fonts/quantum/Quantum.otf") format("truetype"); /* Ruta relativa a la carpeta fonts y formato de la fuente */
 }
 body {
-  background: url(../img/NetWave-System-Background.png) no-repeat center center
+  background: url(../img/glitchbane-logo-pc.jpg) no-repeat center center
     fixed;
   background-size: cover;
   overflow: hidden;
